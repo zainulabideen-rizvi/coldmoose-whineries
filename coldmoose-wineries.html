@@ -1,0 +1,4244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      ColdMoose | Winery Refrigeration Specialists in Ontario | Wine Cellar
+      Cooling & Barrel Room Climate Control
+    </title>
+    <meta
+      name="description"
+      content="Ontario's winery refrigeration specialists. Precision cooling, humidity control & temperature-stable storage for vineyards, barrel rooms, wine cellars and production facilities. Request a consultation."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #062d91;
+        --primary-dark: #031a5c;
+        --primary-light: #1240c4;
+        --secondary: #53f8ff;
+        --secondary-dark: #1cc7d4;
+        --ink: #0a0f24;
+        --ink-soft: #1a223f;
+        --bg: #f7f8fc;
+        --bg-2: #eef1f8;
+        --muted: #5a6388;
+        --line: rgba(6, 45, 145, 0.12);
+        --gold: #c9a96e;
+        --wine: #5a0f1f;
+        --shadow-sm: 0 4px 16px rgba(6, 45, 145, 0.08);
+        --shadow-md: 0 18px 50px rgba(6, 45, 145, 0.12);
+        --shadow-lg: 0 30px 80px rgba(6, 45, 145, 0.18);
+        --radius: 18px;
+        --radius-sm: 12px;
+        --grad-primary: linear-gradient(
+          135deg,
+          #062d91 0%,
+          #1240c4 60%,
+          #0a3fbd 100%
+        );
+        --grad-accent: linear-gradient(135deg, #53f8ff 0%, #1cc7d4 100%);
+        --grad-dark: linear-gradient(
+          135deg,
+          #0a0f24 0%,
+          #06164a 60%,
+          #062d91 100%
+        );
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .container {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 28px;
+      }
+      section {
+        padding: 110px 0;
+        position: relative;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        line-height: 1.18;
+        letter-spacing: -0.01em;
+      }
+      h2 {
+        font-size: clamp(1.9rem, 3.2vw, 2.9rem);
+      }
+      h3 {
+        font-size: 1.45rem;
+      }
+      p {
+        color: var(--muted);
+        font-size: 1rem;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        font-size: 0.78rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--primary);
+        padding: 8px 16px;
+        border: 1px solid var(--line);
+        background: rgba(6, 45, 145, 0.04);
+        border-radius: 100px;
+        margin-bottom: 18px;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--secondary);
+        box-shadow: 0 0 0 4px rgba(83, 248, 255, 0.18);
+      }
+      .section-head {
+        max-width: 780px;
+        margin: 0 auto 60px;
+        text-align: center;
+      }
+      .section-head h2 span {
+        background: var(--grad-primary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .section-head p {
+        margin-top: 14px;
+        font-size: 1.08rem;
+      }
+
+      /* ====== NAV ====== */
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 200;
+        padding: 16px 0;
+        transition: all 0.35s ease;
+        background: rgba(10, 15, 36, 0.55);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .nav.scrolled {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--line);
+        box-shadow: var(--shadow-sm);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+      .logo svg {
+        height: 54px;
+        width: auto;
+        display: block;
+        color: #fff;
+        transition: color 0.3s;
+      }
+      .nav.scrolled .logo svg {
+        color: var(--primary);
+      }
+      .footer-brand .logo svg {
+        height: 64px;
+        color: #fff;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+      .nav-links a {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.92rem;
+        font-weight: 500;
+        transition: color 0.25s;
+      }
+      .nav.scrolled .nav-links a {
+        color: var(--ink-soft);
+      }
+      .nav-links a:hover {
+        color: var(--secondary);
+      }
+      .nav.scrolled .nav-links a:hover {
+        color: var(--primary);
+      }
+      .nav-cta {
+        background: var(--grad-accent);
+        color: var(--primary-dark) !important;
+        padding: 11px 22px;
+        border-radius: 100px;
+        font-weight: 700 !important;
+        font-size: 0.85rem !important;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
+        box-shadow: 0 8px 22px rgba(83, 248, 255, 0.32);
+      }
+      .nav-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 30px rgba(83, 248, 255, 0.45);
+      }
+      .burger {
+        display: none;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.4rem;
+        cursor: pointer;
+      }
+      .nav.scrolled .burger {
+        color: var(--ink);
+      }
+
+      /* ====== HERO ====== */
+      .hero {
+        min-height: 100vh;
+        padding: 160px 0 120px;
+        background:
+          linear-gradient(
+            120deg,
+            rgba(6, 15, 40, 0.92) 0%,
+            rgba(6, 45, 145, 0.78) 55%,
+            rgba(6, 15, 40, 0.85) 100%
+          ),
+          url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=2000&q=80")
+            center/cover;
+        color: #fff;
+        overflow: hidden;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            circle at 78% 24%,
+            rgba(83, 248, 255, 0.15),
+            transparent 45%
+          ),
+          radial-gradient(
+            circle at 12% 78%,
+            rgba(6, 45, 145, 0.4),
+            transparent 55%
+          );
+        pointer-events: none;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 60px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+      .hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 9px 18px;
+        border-radius: 100px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(83, 248, 255, 0.25);
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--secondary);
+        margin-bottom: 24px;
+      }
+      .hero-eyebrow i {
+        color: var(--secondary);
+      }
+      .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        line-height: 1.05;
+        margin-bottom: 22px;
+        color: #fff;
+      }
+      .hero h1 .accent {
+        background: linear-gradient(135deg, #53f8ff 0%, #a6fcff 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-style: italic;
+      }
+      .hero-sub {
+        font-size: 1.12rem;
+        color: rgba(255, 255, 255, 0.82);
+        max-width: 580px;
+        margin-bottom: 36px;
+        font-weight: 400;
+      }
+      .hero-ctas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-bottom: 42px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 16px 28px;
+        border-radius: 100px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        border: none;
+        transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+        font-family: "Open Sans", sans-serif;
+      }
+      .btn-primary {
+        background: var(--grad-accent);
+        color: var(--primary-dark);
+        box-shadow: 0 14px 36px rgba(83, 248, 255, 0.35);
+      }
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 22px 50px rgba(83, 248, 255, 0.5);
+      }
+      .btn-ghost {
+        background: rgba(255, 255, 255, 0.06);
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(8px);
+      }
+      .btn-ghost:hover {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(83, 248, 255, 0.4);
+      }
+      .btn-dark {
+        background: var(--grad-primary);
+        color: #fff;
+        box-shadow: 0 14px 36px rgba(6, 45, 145, 0.4);
+      }
+      .btn-dark:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 22px 50px rgba(6, 45, 145, 0.55);
+      }
+      .hero-trust {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .trust-item i {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: rgba(83, 248, 255, 0.12);
+        color: var(--secondary);
+        display: grid;
+        place-items: center;
+        font-size: 0.95rem;
+        border: 1px solid rgba(83, 248, 255, 0.25);
+      }
+      .trust-item span {
+        font-size: 0.86rem;
+        color: rgba(255, 255, 255, 0.78);
+        font-weight: 500;
+      }
+      .trust-item strong {
+        display: block;
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.96rem;
+      }
+
+      /* Hero card */
+      .hero-card {
+        position: relative;
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 24px;
+        padding: 34px;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+      }
+      .hero-card::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border-radius: 25px;
+        background: linear-gradient(
+          135deg,
+          rgba(83, 248, 255, 0.5),
+          transparent 50%,
+          rgba(6, 45, 145, 0.3)
+        );
+        z-index: -1;
+      }
+      .hero-card .tag {
+        display: inline-block;
+        padding: 5px 12px;
+        border-radius: 8px;
+        background: rgba(83, 248, 255, 0.18);
+        color: var(--secondary);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+      }
+      .hero-card h3 {
+        color: #fff;
+        font-size: 1.45rem;
+        margin-bottom: 8px;
+        font-family: "Open Sans", sans-serif;
+      }
+      .hero-card p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.92rem;
+        margin-bottom: 22px;
+      }
+      .hero-card .specs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-bottom: 22px;
+      }
+      .spec {
+        padding: 14px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .spec .label {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.55);
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+      .spec .value {
+        font-size: 1.25rem;
+        color: #fff;
+        font-weight: 700;
+        font-family: "Open Sans", sans-serif;
+      }
+      .spec .value span {
+        color: var(--secondary);
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-left: 4px;
+        font-family: "Open Sans";
+      }
+      .hero-card .progress {
+        height: 6px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 100px;
+        overflow: hidden;
+        margin-bottom: 8px;
+      }
+      .hero-card .progress span {
+        display: block;
+        height: 100%;
+        width: 92%;
+        background: var(--grad-accent);
+        border-radius: 100px;
+        box-shadow: 0 0 18px rgba(83, 248, 255, 0.6);
+      }
+      .hero-card .progress-label {
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.65);
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* Marquee */
+      .marquee {
+        background: var(--ink);
+        color: rgba(255, 255, 255, 0.55);
+        padding: 24px 0;
+        overflow: hidden;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .marquee-track {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+        white-space: nowrap;
+        animation: scroll 38s linear infinite;
+      }
+      .marquee-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        font-size: 0.84rem;
+        font-weight: 500;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      .marquee-item i {
+        color: var(--secondary);
+        font-size: 1.1rem;
+      }
+      @keyframes scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* ====== CHALLENGES ====== */
+      .challenges {
+        background: #fff;
+      }
+      .challenges-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+        margin-top: 50px;
+      }
+      .challenge-card {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 34px 28px;
+        position: relative;
+        transition: all 0.35s ease;
+        overflow: hidden;
+      }
+      .challenge-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: var(--grad-primary);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s;
+      }
+      .challenge-card:hover::before {
+        transform: scaleX(1);
+      }
+      .challenge-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-md);
+        border-color: transparent;
+      }
+      .challenge-num {
+        font-family: "Open Sans", sans-serif;
+        font-size: 2.5rem;
+        color: var(--primary);
+        opacity: 0.16;
+        font-weight: 700;
+        position: absolute;
+        top: 20px;
+        right: 24px;
+      }
+      .challenge-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: linear-gradient(
+          135deg,
+          rgba(6, 45, 145, 0.08),
+          rgba(83, 248, 255, 0.12)
+        );
+        color: var(--primary);
+        display: grid;
+        place-items: center;
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+        border: 1px solid var(--line);
+      }
+      .challenge-card h3 {
+        color: var(--ink);
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+      }
+      .challenge-card p {
+        font-size: 0.94rem;
+      }
+
+      /* ====== BENEFITS ====== */
+      .benefits {
+        background: var(--bg-2);
+        position: relative;
+        overflow: hidden;
+      }
+      .benefits::before {
+        content: "";
+        position: absolute;
+        top: -200px;
+        right: -200px;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(83, 248, 255, 0.14),
+          transparent 60%
+        );
+      }
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+      .benefit-card {
+        background: #fff;
+        padding: 30px 24px;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--line);
+        transition: all 0.35s ease;
+        text-align: left;
+        position: relative;
+        overflow: hidden;
+      }
+      .benefit-card::after {
+        content: "";
+        position: absolute;
+        bottom: -50px;
+        right: -50px;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(83, 248, 255, 0.18),
+          transparent 70%
+        );
+        opacity: 0;
+        transition: opacity 0.4s;
+      }
+      .benefit-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-md);
+        border-color: rgba(83, 248, 255, 0.35);
+      }
+      .benefit-card:hover::after {
+        opacity: 1;
+      }
+      .benefit-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 14px;
+        background: var(--grad-primary);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font-size: 1.3rem;
+        margin-bottom: 18px;
+        box-shadow: 0 10px 24px rgba(6, 45, 145, 0.28);
+      }
+      .benefit-card h4 {
+        font-size: 1.15rem;
+        color: var(--ink);
+        margin-bottom: 8px;
+      }
+      .benefit-card p {
+        font-size: 0.88rem;
+        line-height: 1.55;
+      }
+
+      /* ====== TECHNICAL EXPERTISE ====== */
+      .tech {
+        background: var(--grad-dark);
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+      .tech::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=1800&q=80")
+          center/cover;
+        opacity: 0.06;
+        mix-blend-mode: luminosity;
+      }
+      .tech-grid {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 60px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+      .tech h2 {
+        color: #fff;
+      }
+      .tech h2 span {
+        background: var(--grad-accent);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .tech .eyebrow {
+        background: rgba(83, 248, 255, 0.08);
+        border-color: rgba(83, 248, 255, 0.25);
+        color: var(--secondary);
+      }
+      .tech .lead {
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 1.05rem;
+        margin: 18px 0 30px;
+      }
+      .tech-features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-bottom: 36px;
+      }
+      .tech-feat {
+        padding: 14px 16px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.88);
+        transition: all 0.3s;
+      }
+      .tech-feat:hover {
+        background: rgba(83, 248, 255, 0.06);
+        border-color: rgba(83, 248, 255, 0.25);
+      }
+      .tech-feat i {
+        color: var(--secondary);
+        font-size: 0.85rem;
+      }
+      .tech-visual {
+        position: relative;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .tech-visual img {
+        width: 100%;
+        height: 520px;
+        object-fit: cover;
+      }
+      .tech-visual::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 45%,
+          rgba(6, 15, 40, 0.85) 100%
+        );
+      }
+      .tech-overlay {
+        position: absolute;
+        left: 28px;
+        right: 28px;
+        bottom: 28px;
+        z-index: 3;
+      }
+      .tech-overlay .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 14px;
+        border-radius: 100px;
+        background: rgba(83, 248, 255, 0.18);
+        color: var(--secondary);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        border: 1px solid rgba(83, 248, 255, 0.3);
+      }
+      .tech-overlay h4 {
+        color: #fff;
+        font-size: 1.4rem;
+        margin-bottom: 6px;
+      }
+      .tech-overlay p {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 0.92rem;
+      }
+      .tech-stat-strip {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        background: rgba(10, 15, 36, 0.65);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 18px 22px;
+        border-radius: 14px;
+      }
+      .tech-stat-strip .num {
+        font-family: "Open Sans", sans-serif;
+        font-size: 2rem;
+        color: var(--secondary);
+        font-weight: 700;
+        line-height: 1;
+      }
+      .tech-stat-strip .lbl {
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.7);
+        margin-top: 4px;
+      }
+
+      /* ====== SOLUTIONS ====== */
+      .solutions {
+        background: #fff;
+      }
+      .solutions-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .sol-card {
+        position: relative;
+        border-radius: var(--radius);
+        overflow: hidden;
+        background: #fff;
+        border: 1px solid var(--line);
+        transition: all 0.4s;
+        cursor: pointer;
+      }
+      .sol-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-lg);
+        border-color: transparent;
+      }
+      .sol-img {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+        background: var(--grad-primary);
+      }
+      .sol-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s;
+      }
+      .sol-img img.broken {
+        opacity: 0;
+      }
+      .sol-card:hover .sol-img img {
+        transform: scale(1.12);
+      }
+      .sol-img::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(6, 15, 40, 0.05) 0%,
+          rgba(6, 15, 40, 0.65) 100%
+        );
+      }
+      .sol-icon {
+        position: absolute;
+        left: 18px;
+        bottom: 18px;
+        z-index: 2;
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: var(--grad-accent);
+        color: var(--primary-dark);
+        display: grid;
+        place-items: center;
+        font-size: 1rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+      .sol-body {
+        padding: 24px;
+      }
+      .sol-body h4 {
+        font-size: 1.2rem;
+        color: var(--ink);
+        margin-bottom: 8px;
+      }
+      .sol-body p {
+        font-size: 0.88rem;
+        margin-bottom: 14px;
+      }
+      .sol-link {
+        color: var(--primary);
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        display: inline-flex;
+        gap: 6px;
+        align-items: center;
+        transition: gap 0.3s;
+      }
+      .sol-card:hover .sol-link {
+        gap: 12px;
+      }
+
+      /* ====== SCALE ====== */
+      .scale {
+        background: var(--bg-2);
+        position: relative;
+        overflow: hidden;
+      }
+      .scale-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        margin-top: 50px;
+      }
+      .scale-card {
+        background: #fff;
+        padding: 34px 26px;
+        border-radius: var(--radius);
+        border: 1px solid var(--line);
+        text-align: center;
+        transition: all 0.35s;
+        position: relative;
+        overflow: hidden;
+      }
+      .scale-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-md);
+        border-color: rgba(83, 248, 255, 0.4);
+      }
+      .scale-circle {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        background: linear-gradient(
+          135deg,
+          rgba(6, 45, 145, 0.06),
+          rgba(83, 248, 255, 0.14)
+        );
+        display: grid;
+        place-items: center;
+        font-size: 2rem;
+        color: var(--primary);
+        border: 1px solid var(--line);
+        position: relative;
+      }
+      .scale-circle::before {
+        content: "";
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        border: 1px dashed rgba(6, 45, 145, 0.18);
+      }
+      .scale-card h4 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        color: var(--ink);
+      }
+      .scale-card p {
+        font-size: 0.88rem;
+      }
+      .scale-tag {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 8px;
+        background: rgba(83, 248, 255, 0.15);
+        color: var(--primary);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+
+      /* ====== PROCESS ====== */
+      .process {
+        background: #fff;
+      }
+      .process-timeline {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        margin-top: 60px;
+        position: relative;
+      }
+      .process-timeline::before {
+        content: "";
+        position: absolute;
+        top: 35px;
+        left: 8%;
+        right: 8%;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--primary) 20%,
+          var(--secondary) 80%,
+          transparent
+        );
+        opacity: 0.25;
+        z-index: 0;
+      }
+      .step {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+      }
+      .step-num {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin: 0 auto 22px;
+        background: #fff;
+        border: 2px solid var(--line);
+        display: grid;
+        place-items: center;
+        position: relative;
+        box-shadow: 0 8px 20px rgba(6, 45, 145, 0.08);
+        transition: all 0.35s;
+      }
+      .step:hover .step-num {
+        transform: translateY(-4px);
+        border-color: var(--secondary);
+        box-shadow: 0 16px 36px rgba(83, 248, 255, 0.25);
+      }
+      .step-num span {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        background: var(--grad-primary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .step-num::after {
+        content: "";
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        background: var(--secondary);
+        border-radius: 50%;
+        top: -3px;
+        right: -3px;
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 3px rgba(83, 248, 255, 0.25);
+      }
+      .step h4 {
+        font-size: 1.18rem;
+        margin-bottom: 10px;
+        color: var(--ink);
+      }
+      .step p {
+        font-size: 0.9rem;
+        padding: 0 8px;
+      }
+      .step i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: rgba(6, 45, 145, 0.06);
+        color: var(--primary);
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+      }
+
+      /* ====== UMBRELLA ====== */
+      .umbrella {
+        background: linear-gradient(135deg, #0a0f24 0%, #062d91 100%);
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+      .umbrella::before {
+        content: "";
+        position: absolute;
+        top: -150px;
+        left: -150px;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(83, 248, 255, 0.15),
+          transparent 60%
+        );
+      }
+      .umbrella::after {
+        content: "";
+        position: absolute;
+        bottom: -200px;
+        right: -200px;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(83, 248, 255, 0.1),
+          transparent 60%
+        );
+      }
+      .umbrella-grid {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 60px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+      .umbrella h2 {
+        color: #fff;
+      }
+      .umbrella h2 span {
+        background: var(--grad-accent);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .umbrella .eyebrow {
+        background: rgba(83, 248, 255, 0.08);
+        border-color: rgba(83, 248, 255, 0.25);
+        color: var(--secondary);
+      }
+      .umbrella .lead {
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 1.05rem;
+        margin: 18px 0 28px;
+      }
+      .umbrella-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .umbrella-item {
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 14px;
+        padding: 22px;
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        transition: all 0.35s;
+      }
+      .umbrella-item:hover {
+        background: rgba(83, 248, 255, 0.06);
+        border-color: rgba(83, 248, 255, 0.3);
+        transform: translateY(-3px);
+      }
+      .umbrella-item .ic {
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: rgba(83, 248, 255, 0.14);
+        color: var(--secondary);
+        display: grid;
+        place-items: center;
+        font-size: 1rem;
+        border: 1px solid rgba(83, 248, 255, 0.25);
+      }
+      .umbrella-item h5 {
+        color: #fff;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.15rem;
+        margin-bottom: 4px;
+        font-weight: 600;
+      }
+      .umbrella-item p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.84rem;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      /* ====== FINANCING ====== */
+      .financing {
+        background: #fff;
+      }
+      .financing-card {
+        background: linear-gradient(135deg, #062d91 0%, #1240c4 100%);
+        border-radius: 26px;
+        padding: 60px;
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+        box-shadow: 0 30px 80px rgba(6, 45, 145, 0.3);
+      }
+      .financing-card::before {
+        content: "";
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(83, 248, 255, 0.18),
+          transparent 60%
+        );
+      }
+      .financing-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 50px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+      .financing h2 {
+        color: #fff;
+        font-size: 2.3rem;
+      }
+      .financing h2 span {
+        background: var(--grad-accent);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .financing p {
+        color: rgba(255, 255, 255, 0.82);
+        margin: 14px 0 24px;
+        font-size: 1.02rem;
+      }
+      .financing .options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .financing .tag {
+        padding: 8px 16px;
+        border-radius: 100px;
+        background: rgba(83, 248, 255, 0.12);
+        border: 1px solid rgba(83, 248, 255, 0.3);
+        font-size: 0.82rem;
+        color: var(--secondary);
+        font-weight: 500;
+      }
+      .financing-side {
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 18px;
+        padding: 30px;
+        text-align: center;
+      }
+      .financing-side .icon {
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        margin: 0 auto 16px;
+        background: var(--grad-accent);
+        color: var(--primary-dark);
+        display: grid;
+        place-items: center;
+        font-size: 1.4rem;
+      }
+      .financing-side h4 {
+        color: #fff;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        font-family: "Open Sans", sans-serif;
+      }
+      .financing-side p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.88rem;
+        margin-bottom: 18px;
+      }
+      .partner-strip {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 14px 6px 6px;
+        border-radius: 100px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        margin-bottom: 18px;
+      }
+      .partner-strip .pill {
+        background: #fff;
+        color: var(--primary-dark);
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        font-size: 0.72rem;
+        padding: 5px 12px;
+        border-radius: 100px;
+        text-transform: uppercase;
+      }
+      .partner-strip span {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+      }
+
+      /* ====== RENTAL ====== */
+      .rental {
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+      .rental::before {
+        content: "";
+        position: absolute;
+        top: -180px;
+        left: -180px;
+        width: 520px;
+        height: 520px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(83, 248, 255, 0.12),
+          transparent 60%
+        );
+      }
+      .rental::after {
+        content: "";
+        position: absolute;
+        bottom: -220px;
+        right: -180px;
+        width: 520px;
+        height: 520px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(6, 45, 145, 0.07),
+          transparent 60%
+        );
+      }
+      .rental-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 60px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+      .rental .eyebrow {
+        background: #fff;
+        border-color: var(--line);
+      }
+      .rental h2 span {
+        background: var(--grad-primary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .rental .partner-strip-light {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 14px 6px 6px;
+        border-radius: 100px;
+        background: #fff;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow-sm);
+        margin-bottom: 18px;
+      }
+      .rental .partner-strip-light .pill {
+        background: var(--grad-primary);
+        color: #fff;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        font-size: 0.72rem;
+        padding: 5px 12px;
+        border-radius: 100px;
+        text-transform: uppercase;
+      }
+      .rental .partner-strip-light span {
+        color: var(--ink-soft);
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+      }
+      .rental .lead {
+        color: var(--muted);
+        font-size: 1.06rem;
+        margin: 18px 0 28px;
+      }
+      .rental-points {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 32px;
+      }
+      .rental-point {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 18px;
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        transition: all 0.3s;
+      }
+      .rental-point:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-sm);
+        border-color: rgba(83, 248, 255, 0.4);
+      }
+      .rental-point .ic {
+        flex-shrink: 0;
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        background: linear-gradient(
+          135deg,
+          rgba(6, 45, 145, 0.08),
+          rgba(83, 248, 255, 0.18)
+        );
+        color: var(--primary);
+        display: grid;
+        place-items: center;
+        font-size: 1rem;
+        border: 1px solid var(--line);
+      }
+      .rental-point h5 {
+        font-size: 0.98rem;
+        color: var(--ink);
+        margin-bottom: 3px;
+        font-weight: 700;
+      }
+      .rental-point p {
+        font-size: 0.84rem;
+        line-height: 1.55;
+        color: var(--muted);
+        margin: 0;
+      }
+      .rental-visual {
+        position: relative;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 30px 80px rgba(6, 45, 145, 0.18);
+        background: linear-gradient(135deg, #062d91 0%, #0a3fbd 100%);
+        padding: 38px;
+        color: #fff;
+      }
+      .rental-visual::before {
+        content: "";
+        position: absolute;
+        top: -120px;
+        right: -120px;
+        width: 340px;
+        height: 340px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(83, 248, 255, 0.25),
+          transparent 60%
+        );
+      }
+      .rental-visual::after {
+        content: "";
+        position: absolute;
+        bottom: -150px;
+        left: -150px;
+        width: 380px;
+        height: 380px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(83, 248, 255, 0.12),
+          transparent 60%
+        );
+      }
+      .rental-visual-inner {
+        position: relative;
+        z-index: 2;
+      }
+      .rental-visual h3 {
+        color: #fff;
+        font-size: 1.55rem;
+        margin-bottom: 8px;
+      }
+      .rental-visual .sub {
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 0.94rem;
+        margin-bottom: 24px;
+      }
+      .rental-terms {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 22px;
+      }
+      .rental-term {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(8px);
+        padding: 16px;
+        border-radius: 14px;
+      }
+      .rental-term .lbl {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.6);
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+      .rental-term .val {
+        font-size: 1.35rem;
+        color: #fff;
+        font-weight: 800;
+        line-height: 1;
+      }
+      .rental-term .val span {
+        color: var(--secondary);
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-left: 4px;
+      }
+      .rental-quote {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 18px;
+        border-radius: 14px;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        margin-bottom: 22px;
+      }
+      .rental-quote i {
+        color: var(--secondary);
+        font-size: 1rem;
+        margin-top: 3px;
+      }
+      .rental-quote p {
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.88rem;
+        line-height: 1.55;
+        margin: 0;
+        font-style: italic;
+      }
+      .econo-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 14px 18px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+      }
+      .econo-bar .left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .econo-bar .badge-ic {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: var(--grad-accent);
+        color: var(--primary-dark);
+        display: grid;
+        place-items: center;
+        font-size: 1rem;
+      }
+      .econo-bar .label {
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.6);
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+      .econo-bar .name {
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.96rem;
+      }
+
+      /* ====== TRUST ====== */
+      .trust {
+        background: var(--bg-2);
+        position: relative;
+        overflow: hidden;
+      }
+      .trust-stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-bottom: 60px;
+      }
+      .stat-card {
+        background: #fff;
+        padding: 36px 28px;
+        border-radius: var(--radius);
+        text-align: center;
+        border: 1px solid var(--line);
+        transition: all 0.35s;
+      }
+      .stat-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
+      .stat-num {
+        font-family: "Open Sans", sans-serif;
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 1;
+        background: var(--grad-primary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .stat-num .plus {
+        color: var(--secondary-dark);
+        -webkit-text-fill-color: var(--secondary-dark);
+      }
+      .stat-card .lbl {
+        margin-top: 10px;
+        font-size: 0.86rem;
+        color: var(--muted);
+        font-weight: 500;
+        letter-spacing: 0.04em;
+      }
+      .trust-features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .trust-feat {
+        background: #fff;
+        padding: 28px;
+        border-radius: var(--radius);
+        border: 1px solid var(--line);
+        display: flex;
+        gap: 18px;
+        align-items: flex-start;
+        transition: all 0.35s;
+      }
+      .trust-feat:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-sm);
+        border-color: rgba(83, 248, 255, 0.3);
+      }
+      .trust-feat .ic {
+        flex-shrink: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+        background: var(--grad-primary);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font-size: 1.15rem;
+      }
+      .trust-feat h5 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.15rem;
+        color: var(--ink);
+        margin-bottom: 4px;
+        font-weight: 600;
+      }
+      .trust-feat p {
+        font-size: 0.88rem;
+        margin: 0;
+      }
+
+      /* Testimonial */
+      .testimonial {
+        background: #fff;
+        border-radius: var(--radius);
+        padding: 46px;
+        border: 1px solid var(--line);
+        margin-top: 50px;
+        position: relative;
+      }
+      .testimonial::before {
+        content: "\201C";
+        position: absolute;
+        top: -20px;
+        left: 30px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 8rem;
+        color: var(--secondary);
+        opacity: 0.4;
+        line-height: 1;
+      }
+      .testimonial blockquote {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: var(--ink);
+        font-style: italic;
+        font-weight: 500;
+        margin-bottom: 24px;
+        padding-left: 30px;
+      }
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding-left: 30px;
+      }
+      .testimonial-avatar {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: var(--grad-primary);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+      }
+      .testimonial-author .info strong {
+        display: block;
+        color: var(--ink);
+        font-weight: 600;
+      }
+      .testimonial-author .info span {
+        font-size: 0.86rem;
+        color: var(--muted);
+      }
+
+      /* ====== EMERGENCY ====== */
+      .emergency {
+        background: linear-gradient(
+          135deg,
+          #1a0a2e 0%,
+          #0a1245 50%,
+          #062d91 100%
+        );
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+      .emergency::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1800&q=80")
+          center/cover;
+        opacity: 0.05;
+      }
+      .emergency-inner {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 50px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+      .emergency h2 {
+        color: #fff;
+        font-size: 2.5rem;
+      }
+      .emergency h2 span {
+        color: var(--secondary);
+      }
+      .emergency .badge-247 {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 16px;
+        border-radius: 100px;
+        background: linear-gradient(135deg, #ff4757, #c92a3b);
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+        box-shadow: 0 10px 26px rgba(255, 71, 87, 0.35);
+      }
+      .emergency .badge-247::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #fff;
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(1.4);
+        }
+      }
+      .emergency p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.05rem;
+        margin-bottom: 28px;
+      }
+      .emergency-features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 28px;
+      }
+      .emergency-feat {
+        padding: 14px 16px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.88);
+      }
+      .emergency-feat i {
+        color: var(--secondary);
+        font-size: 0.85rem;
+      }
+      .emergency-call {
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(14px);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 24px;
+        padding: 40px;
+        text-align: center;
+        position: relative;
+      }
+      .emergency-call .icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0 auto 18px;
+        background: linear-gradient(135deg, #ff4757, #c92a3b);
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-size: 1.8rem;
+        box-shadow: 0 20px 50px rgba(255, 71, 87, 0.35);
+        animation: ring 3s infinite;
+      }
+      @keyframes ring {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        10%,
+        30% {
+          transform: rotate(-10deg) scale(1.05);
+        }
+        20%,
+        40% {
+          transform: rotate(10deg) scale(1.05);
+        }
+      }
+      .emergency-call .lbl {
+        font-size: 0.78rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--secondary);
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .emergency-call h3 {
+        color: #fff;
+        font-size: 2.3rem;
+        margin-bottom: 8px;
+        font-family: "Open Sans", sans-serif;
+      }
+      .emergency-call .phone {
+        display: inline-block;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #fff;
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 18px;
+      }
+
+      /* ====== FAQ ====== */
+      .faq {
+        background: #fff;
+      }
+      .faq-grid {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 60px;
+        align-items: flex-start;
+      }
+      .faq-side {
+        position: sticky;
+        top: 120px;
+      }
+      .faq-side h2 span {
+        background: var(--grad-primary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .faq-side p {
+        margin: 14px 0 24px;
+      }
+      .faq-help {
+        background: var(--bg-2);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 24px;
+        display: flex;
+        gap: 14px;
+        align-items: center;
+      }
+      .faq-help .ic {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+        flex-shrink: 0;
+        background: var(--grad-primary);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font-size: 1.1rem;
+      }
+      .faq-help h5 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.15rem;
+        margin-bottom: 4px;
+        font-weight: 600;
+        color: var(--ink);
+      }
+      .faq-help p {
+        font-size: 0.86rem;
+        margin: 0;
+      }
+      .faq-help a {
+        color: var(--primary);
+        font-weight: 600;
+      }
+      .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .faq-item {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-sm);
+        overflow: hidden;
+        transition: all 0.3s;
+      }
+      .faq-item.active {
+        box-shadow: var(--shadow-md);
+        border-color: rgba(83, 248, 255, 0.4);
+      }
+      .faq-q {
+        padding: 22px 26px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+        font-weight: 600;
+        color: var(--ink);
+        font-size: 1rem;
+        transition: color 0.3s;
+      }
+      .faq-q:hover {
+        color: var(--primary);
+      }
+      .faq-q .toggle {
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--bg-2);
+        color: var(--primary);
+        display: grid;
+        place-items: center;
+        transition: all 0.3s;
+        font-size: 0.8rem;
+      }
+      .faq-item.active .toggle {
+        background: var(--grad-primary);
+        color: #fff;
+        transform: rotate(180deg);
+      }
+      .faq-a {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.4s ease,
+          padding 0.4s ease;
+        color: var(--muted);
+        font-size: 0.94rem;
+        line-height: 1.7;
+        padding: 0 26px;
+      }
+      .faq-item.active .faq-a {
+        max-height: 400px;
+        padding: 0 26px 22px;
+      }
+
+      /* ====== LEAD FORM ====== */
+      section.lead {
+        background: var(--grad-dark);
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+      section.lead::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("https://images.unsplash.com/photo-1474722883778-792e7990302f?auto=format&fit=crop&w=2000&q=80")
+          center/cover;
+        opacity: 0.08;
+        mix-blend-mode: luminosity;
+      }
+      section.lead::after {
+        content: "";
+        position: absolute;
+        top: -200px;
+        right: -200px;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(83, 248, 255, 0.18),
+          transparent 60%
+        );
+      }
+      .lead-grid {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 60px;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+      section.lead h2 {
+        color: #fff;
+      }
+      section.lead h2 span {
+        background: var(--grad-accent);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      section.lead .eyebrow {
+        background: rgba(83, 248, 255, 0.08);
+        border-color: rgba(83, 248, 255, 0.25);
+        color: var(--secondary);
+      }
+      .lead-lead {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 1.05rem;
+        margin: 18px 0 30px;
+      }
+      .lead-highlights {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .lead-hl {
+        padding: 18px 22px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 14px;
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        transition: all 0.3s;
+      }
+      .lead-hl:hover {
+        background: rgba(83, 248, 255, 0.06);
+        border-color: rgba(83, 248, 255, 0.3);
+      }
+      .lead-hl .ic {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        flex-shrink: 0;
+        background: rgba(83, 248, 255, 0.14);
+        color: var(--secondary);
+        display: grid;
+        place-items: center;
+        font-size: 1rem;
+        border: 1px solid rgba(83, 248, 255, 0.25);
+      }
+      .lead-hl strong {
+        display: block;
+        color: #fff;
+        font-size: 0.96rem;
+        margin-bottom: 2px;
+      }
+      .lead-hl span {
+        font-size: 0.84rem;
+        color: rgba(255, 255, 255, 0.65);
+      }
+      .form-card {
+        background: rgba(255, 255, 255, 0.97);
+        border-radius: 24px;
+        padding: 42px;
+        box-shadow: 0 40px 100px rgba(0, 0, 0, 0.45);
+        position: relative;
+      }
+      .form-card .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 14px;
+        border-radius: 100px;
+        background: rgba(6, 45, 145, 0.06);
+        color: var(--primary);
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+      }
+      .form-card h3 {
+        font-size: 1.7rem;
+        color: var(--ink);
+        margin-bottom: 6px;
+      }
+      .form-card > p {
+        color: var(--muted);
+        font-size: 0.94rem;
+        margin-bottom: 24px;
+      }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-bottom: 14px;
+      }
+      .form-row.single {
+        grid-template-columns: 1fr;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .form-group label {
+        font-size: 0.76rem;
+        font-weight: 600;
+        color: var(--ink-soft);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        padding: 13px 16px;
+        border: 1.5px solid var(--line);
+        border-radius: 12px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.94rem;
+        color: var(--ink);
+        background: #fff;
+        transition: all 0.25s;
+      }
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 4px rgba(6, 45, 145, 0.1);
+      }
+      .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+      .form-submit {
+        margin-top: 8px;
+      }
+      .form-submit .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 18px;
+      }
+      .form-meta {
+        text-align: center;
+        margin-top: 14px;
+        font-size: 0.78rem;
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+      }
+      .form-meta i {
+        color: var(--primary);
+      }
+
+      /* ====== FOOTER ====== */
+      footer {
+        background: #06091a;
+        color: rgba(255, 255, 255, 0.7);
+        padding: 70px 0 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.3fr 0.9fr 0.9fr 1fr;
+        gap: 50px;
+        margin-bottom: 50px;
+      }
+      .footer-brand .logo {
+        color: #fff;
+        margin-bottom: 14px;
+      }
+      .footer-brand p {
+        font-size: 0.92rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 20px;
+        max-width: 340px;
+      }
+      .footer-social {
+        display: flex;
+        gap: 10px;
+      }
+      .footer-social a {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        display: grid;
+        place-items: center;
+        color: rgba(255, 255, 255, 0.7);
+        transition: all 0.3s;
+      }
+      .footer-social a:hover {
+        background: var(--secondary);
+        color: var(--primary-dark);
+        border-color: var(--secondary);
+        transform: translateY(-3px);
+      }
+      .footer-col h5 {
+        color: #fff;
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.84rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+      .footer-col ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .footer-col a {
+        font-size: 0.92rem;
+        transition: color 0.25s;
+      }
+      .footer-col a:hover {
+        color: var(--secondary);
+      }
+      .footer-contact li {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        font-size: 0.9rem;
+      }
+      .footer-contact i {
+        color: var(--secondary);
+        margin-top: 5px;
+        font-size: 0.85rem;
+      }
+      .footer-bottom {
+        padding-top: 28px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 14px;
+        font-size: 0.84rem;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .footer-bottom .links {
+        display: flex;
+        gap: 24px;
+      }
+
+      /* Reveal animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.9s ease,
+          transform 0.9s ease;
+      }
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 1100px) {
+        .hero-grid,
+        .tech-grid,
+        .umbrella-grid,
+        .faq-grid,
+        .lead-grid,
+        .emergency-inner,
+        .financing-grid {
+          grid-template-columns: 1fr;
+          gap: 50px;
+        }
+        .faq-side {
+          position: static;
+        }
+        .benefits-grid,
+        .solutions-grid,
+        .scale-grid,
+        .trust-stats,
+        .process-timeline,
+        .trust-features,
+        .challenges-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .process-timeline::before {
+          display: none;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 40px;
+        }
+        section {
+          padding: 90px 0;
+        }
+      }
+      @media (max-width: 760px) {
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: #fff;
+          flex-direction: column;
+          padding: 24px;
+          gap: 18px;
+          border-top: 1px solid var(--line);
+          box-shadow: var(--shadow-md);
+        }
+        .nav-links.open {
+          display: flex;
+        }
+        .nav-links a {
+          color: var(--ink);
+        }
+        .burger {
+          display: block;
+        }
+        .nav {
+          background: rgba(10, 15, 36, 0.85);
+        }
+        .hero {
+          padding: 140px 0 80px;
+        }
+        .hero-trust {
+          gap: 16px;
+        }
+        .benefits-grid,
+        .solutions-grid,
+        .scale-grid,
+        .trust-stats,
+        .process-timeline,
+        .trust-features,
+        .challenges-grid,
+        .tech-features,
+        .umbrella-list,
+        .emergency-features,
+        .footer-grid,
+        .form-row {
+          grid-template-columns: 1fr;
+        }
+        .form-row {
+          gap: 0;
+        }
+        .form-row .form-group {
+          margin-bottom: 14px;
+        }
+        .form-card,
+        .financing-card {
+          padding: 28px;
+        }
+        .testimonial blockquote,
+        .testimonial-author {
+          padding-left: 0;
+        }
+        .testimonial {
+          padding: 34px 24px;
+        }
+        section {
+          padding: 70px 0;
+        }
+        .container {
+          padding: 0 20px;
+        }
+        .hero-card {
+          padding: 24px;
+        }
+        .hero-card .specs {
+          grid-template-columns: 1fr;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- LOGO SYMBOL (reusable) -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="cm-logo" viewBox="0 0 470 305">
+        <g>
+          <path
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="1.33333"
+            d="M211.664 2.68623C151.681 8.43057 103.639 35.2462 92.1961 69.3676C87.4745 83.4457 88.5907 96.6885 95.6945 110.897C105.681 130.869 129.859 148.546 161.819 159.243C184.803 166.935 207.242 170.344 235 170.361C271.094 170.384 301.296 164.26 328.26 151.45C362.28 135.29 381.032 112.112 380.955 86.3193C380.894 65.7824 371.064 49.0624 349.862 33.4376C318.179 10.0864 262.877 -2.21899 211.664 2.68623ZM267.087 14.722C289.721 17.7631 309.365 23.6125 326.629 32.4544C346.695 42.7301 359.269 54.2684 366.109 68.6804C378.238 94.2413 362.651 121.864 325.761 140.184C318.053 144.012 307.357 148.346 301.361 150.07C298.703 150.834 298.468 149.228 300.978 147.459C302.512 146.377 302.955 143.886 303.925 130.882L305.068 115.577L302.607 110.715C299.48 104.537 299.342 97.7622 302.223 91.8261C303.727 88.7257 304.126 86.6211 303.67 84.1845C302.696 78.9941 297.99 72.4058 292.791 68.9588C285.606 64.1928 280.099 62.9565 266.069 62.9565H253.737L244.644 58.4329C233.02 52.6496 229.551 52.2369 221.372 55.6595C213.658 58.8894 203.717 61.1975 202.535 60.0342C202.037 59.5426 205.222 54.7396 210.08 48.6584C218.195 38.4995 220.398 34.2455 220.409 28.7115C220.415 25.9128 217.915 22.6722 216.449 23.5784C215.959 23.8822 215.286 25.8369 214.952 27.923C214.619 30.01 213.524 32.4612 212.519 33.3723C211.514 34.2835 210.691 36.2742 210.691 37.7976C210.691 40.9039 207.696 44.4609 205.081 44.4609C204.135 44.4609 200.744 42.4946 197.545 40.0911C189.29 33.8863 187.267 34.118 191.852 40.7433C194.292 44.2662 194.334 44.5398 192.802 46.879C190.807 49.9288 187.688 50.0339 182.212 47.2372L178.118 45.1462L181.74 49.1598C183.731 51.3666 185.628 54.2383 185.955 55.5408C186.692 58.4835 185.086 61.6462 182.423 62.4922C179.974 63.27 174.49 61.1702 175.026 59.6594C175.427 58.5302 176.706 58.5069 180.172 59.566C184.779 60.9726 183.5 54.3492 178.211 49.4022C175.46 46.8293 174.981 44.312 176.935 42.6892C177.846 41.9329 179.696 42.3378 183.779 44.1874C190.959 47.4387 192.521 46.3504 188.787 40.7005C186.113 36.6548 186.115 34.1686 188.794 33.1387C191.295 32.1779 194.61 33.5378 199.748 37.6331C205.3 42.0584 207.774 42.0205 207.774 37.5085C207.774 33.3198 202.83 19.0587 201.155 18.4143C199.104 17.6268 197.009 20.9638 197.255 24.6249C197.612 29.9351 193.169 32.8661 190.196 29.2809C188.184 26.8522 179.452 22.1806 177.982 22.7452C175.989 23.5113 176.384 25.906 179.09 29.4591C181.786 32.9966 182.098 34.7332 180.355 36.4786C178.576 38.2591 175.963 37.8901 171.402 35.2151C167.602 32.9849 165.964 32.8691 165.964 34.8296C165.964 35.2433 167.714 37.6059 169.853 40.0804C174.025 44.9048 174.728 48.2029 172.139 50.7942C170.602 52.3342 169.456 52.3342 165.721 50.7942C162.944 49.6504 163.645 53.0935 166.45 54.3726C167.787 54.982 168.881 55.8785 168.881 56.3643C168.881 57.7816 164.9 56.2173 159.415 52.6438C153.661 48.895 151.379 48.4803 151.379 51.1855C151.379 52.3284 153.063 54.1078 155.753 55.8094C158.158 57.3309 160.127 58.8846 160.128 59.2623C160.133 60.958 153.374 61.1245 149.98 59.5124C148.037 58.5896 146.191 58.0922 145.877 58.4066C144.43 59.8551 147.019 62.3208 152.864 65.0582C157.853 67.3954 161.03 68.1557 167.496 68.5597C172.907 68.8984 175.633 69.4475 175.399 70.1532C175.202 70.7461 171.795 73.5155 167.829 76.3084C158.9 82.5949 155.268 88.4901 155.268 96.6963C155.268 101.012 155.707 102.422 157.655 104.372C160.437 107.158 161.572 107.28 166.314 105.296C168.241 104.49 170.218 103.942 170.707 104.079C171.195 104.216 173.324 102.467 175.436 100.191C178.308 97.0984 180.014 96.0538 182.193 96.0538C185.617 96.0538 187.195 97.6406 190.664 104.572C194.777 112.789 199.023 111.003 199.023 101.054C199.023 93.6085 202.129 91.5594 209.036 94.4486C214.005 96.5269 217.997 101.928 220.805 110.368L223.361 118.052L221.404 123.748C218.949 130.891 213.817 140.135 208.728 146.581L204.812 151.541H209.176C212.713 151.541 213.757 151.126 214.689 149.35C215.32 148.146 216.437 146.806 217.17 146.372C217.903 145.939 219.768 142.791 221.315 139.375C222.861 135.96 225.419 131.277 226.999 128.969C231.263 122.737 234.027 116.89 234.027 114.102C234.027 110.434 235.415 111.076 238.758 116.291C244.778 125.684 245.04 138.277 239.393 146.821L236.917 150.567H241.306C243.72 150.567 245.695 150.147 245.695 149.632C245.695 149.117 246.507 147.913 247.5 146.955C248.971 145.535 249.517 142.585 250.454 131.014C251.241 121.283 251.293 116.001 250.618 114.222C249.718 111.853 249.837 111.629 252.006 111.629C255.27 111.629 262.858 108.952 266.959 106.354L270.361 104.198L273.652 110.885C276.23 116.125 276.799 118.246 276.281 120.684C275.193 125.814 269.591 137.073 265.331 142.698C261.086 148.3 260.955 149.594 264.633 149.594C267.955 149.594 270.004 148.614 270.004 147.026C270.004 146.263 270.699 145.372 271.55 145.045C272.399 144.719 274.571 141.337 276.373 137.532C278.177 133.725 281.419 127.794 283.579 124.351C286.212 120.152 287.506 116.977 287.506 114.709C287.506 111.332 287.508 111.33 289.555 113.182C290.683 114.202 292.752 117.226 294.155 119.903C296.29 123.977 296.705 126.041 296.705 132.558C296.705 139.151 296.298 141.125 294.05 145.424C290.91 151.431 290.93 151.295 293.096 151.774C295.186 152.236 283.726 154.977 270.554 157.166C263.141 158.398 254.516 158.793 235 158.793C212.316 158.794 207.72 158.524 196.592 156.533C139.373 146.301 100.779 118.25 100.656 86.8002C100.623 78.4597 101.966 73.0872 106.007 65.3901C109.613 58.5253 122.123 45.5054 130.136 40.279C153.623 24.9627 183.831 15.7607 219.928 12.9269C228.588 12.2475 256.602 13.3134 267.087 14.722Z"
+          />
+          <path
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="1.33333"
+            d="M206.803 226.982V262.513H214.543H222.283L221.68 234.77C221.229 214.028 221.361 209.026 222.204 209.026C222.825 209.026 223 209.586 223 210C223 210.414 225.52 220.557 228.194 235.256C230.868 249.956 233.056 262.101 233.056 262.247C233.056 262.58 248.594 262.603 248.666 262.27C248.694 262.136 251.013 249.79 253.817 234.835C256.622 219.88 259.333 207.505 259.842 207.335C260.418 207.142 260.638 217.487 260.425 234.77L260.082 262.513H267.474H274.866V226.982V191.451H262.883H250.9L246.772 217.004C242.341 244.44 242.037 245.964 240.989 245.964C240.611 245.964 238.424 234.466 236.129 220.411C233.835 206.358 231.5 191.451 231.5 191.451C231.5 191.451 229.57 191.451 218.892 191.451H206.803V226.982Z"
+          />
+          <path
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="1.33333"
+            d="M67.7684 190.785C65.9025 191.38 62.5819 193.661 60.3903 195.855C54.4698 201.783 52.6875 209.21 52.6875 227.955C52.6875 243.932 54.0245 250.303 58.6654 256.437C66.3935 266.655 86.1571 266.353 93.3767 255.908C98.5602 248.408 99.2904 244.861 99.3264 226.982C99.3643 208.118 98.284 203.284 92.5239 196.548C87.1664 190.281 76.8665 187.884 67.7684 190.785ZM79.5628 205.079C80.5477 206.417 81.7943 209.872 82.3349 212.756C83.6174 219.61 83.5921 236.792 82.2901 242.869C80.3562 251.896 74.9733 254.358 71.2318 247.927C69.5886 245.101 69.1967 242.387 68.8827 231.626C68.4305 216.136 69.151 209.422 71.7209 205.194C74.0039 201.433 76.8509 201.392 79.5628 205.079Z"
+          />
+          <path
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="1.33333"
+            d="M296.081 190.222C294.215 190.817 290.894 193.099 288.703 195.293C282.782 201.22 281 208.648 281 227.393C281 243.37 282.337 249.74 286.978 255.875C294.706 266.092 314.47 265.79 321.689 255.345C326.873 247.846 327.603 244.298 327.639 226.419C327.677 207.556 326.597 202.721 320.836 195.985C315.479 189.719 305.179 187.321 296.081 190.222ZM307.875 204.516C308.86 205.855 310.107 209.31 310.647 212.193C311.93 219.047 311.905 236.23 310.603 242.307C308.669 251.334 303.286 253.795 299.544 247.365C297.901 244.539 297.509 241.825 297.195 231.063C296.743 215.574 297.464 208.86 300.033 204.631C302.316 200.871 305.163 200.83 307.875 204.516Z"
+          />
+          <path
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="1.33333"
+            d="M347.081 190.222C345.215 190.817 341.894 193.099 339.703 195.293C333.782 201.22 332 208.648 332 227.393C332 243.37 333.337 249.74 337.978 255.875C345.706 266.092 365.47 265.79 372.689 255.345C377.873 247.846 378.603 244.298 378.639 226.419C378.677 207.556 377.597 202.721 371.836 195.985C366.479 189.719 356.179 187.321 347.081 190.222ZM358.875 204.516C359.86 205.855 361.107 209.31 361.647 212.193C362.93 219.047 362.905 236.23 361.603 242.307C359.669 251.334 354.286 253.795 350.544 247.365C348.901 244.539 348.509 241.825 348.195 231.063C347.743 215.574 348.464 208.86 351.033 204.631C353.316 200.871 356.163 200.83 358.875 204.516Z"
+          />
+          <path
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="1.33333"
+            d="M144.087 226.982V262.513H156.362C173.39 262.513 178.711 260.475 184.402 251.773C188.868 244.944 190.588 236.643 190.039 224.56C189.307 208.416 184.5 198.949 174.503 193.962C169.868 191.649 168.472 191.451 156.78 191.451H144.087V226.982ZM168.065 205.163C171.956 207.248 173.781 213.745 173.853 225.768C173.956 243.065 171.058 249.858 163.577 249.858H160.13V226.982V204.106H163.112C164.751 204.106 166.98 204.581 168.065 205.163Z"
+          />
+          <path
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="1.33333"
+            d="M398.53 190.545C389.021 192.418 383.749 198.734 383.788 208.204C383.829 218.027 386.9 221.984 402.002 231.671C412.644 238.498 415.68 245.253 410.457 250.482C405.731 255.214 399.86 251.449 398.736 242.964C398.028 237.627 398.174 237.689 388.871 238.807L383.767 239.422V244.576C383.767 253.244 386.523 257.903 393.976 261.832C399.549 264.771 412.578 264.808 418.86 261.902C427.406 257.951 431.133 248.258 428.104 237.859C426.038 230.765 421.362 225.883 410.182 219.146C405.726 216.461 401.37 213.091 400.5 211.658C397.093 206.035 403.083 199.971 408.87 203.184C410.662 204.178 411.92 206.1 412.892 209.327L414.306 214.024L420.671 213.347C424.171 212.974 427.377 212.46 427.795 212.205C428.613 211.705 427.941 206.504 426.408 201.477C425.102 197.197 419.79 192.803 413.747 191.006C408.251 189.372 404.982 189.273 398.53 190.545Z"
+          />
+          <path
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="1.33333"
+            d="M20.8128 190.53C9.32565 193.352 4.42899 200.62 2.41042 217.848C0.156559 237.078 4.2034 254.689 12.1133 260.069C17.3649 263.642 24.9646 265.068 31.4715 263.702C43.1735 261.244 47.4177 255.693 48.1139 241.929C48.6011 232.317 49.166 232.932 38.832 231.824L32.755 231.171V237.642C32.755 250.859 25.797 256.179 20.9489 246.668C19.2979 243.427 18.8049 240.27 18.4101 230.433C17.8637 216.798 19.0733 208.615 22.2285 204.598C26.3522 199.349 32.014 204.159 32.2824 213.14C32.367 215.992 32.8366 218.226 33.3247 218.104C33.8138 217.98 37.1674 217.593 40.7767 217.242L47.3399 216.606V211.017C47.3399 202.84 43.4827 195.584 37.6166 192.727C32.3456 190.159 25.8047 189.304 20.8128 190.53Z"
+          />
+          <path
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="1.33333"
+            d="M433.355 226.982V262.513H450.857H468.359V256.186V249.858H459.122H449.885V241.097V232.336H457.664H465.442V226.009V219.681H457.664H449.885V211.894V204.106H459.122H468.359V197.779V191.451H450.857H433.355V226.982Z"
+          />
+          <path
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="1.33333"
+            d="M104.707 226.982V262.513H122.209H139.711V255.699V248.885H130.474H121.237V220.168V191.451H112.972H104.707V226.982Z"
+          />
+          <path
+            fill="currentColor"
+            d="M91.963 293.647C93.0457 293.84 93.964 294.411 94.718 295.358C95.472 296.305 95.849 297.378 95.849 298.577C95.849 299.602 95.5783 300.53 95.037 301.361C94.515 302.173 93.7513 302.821 92.746 303.304C91.7407 303.768 90.571 304 89.237 304H81.175V283.845H88.86C90.2327 283.845 91.412 284.077 92.398 284.541C93.384 285.005 94.1283 285.633 94.631 286.426C95.1337 287.199 95.385 288.069 95.385 289.036C95.385 290.196 95.0757 291.163 94.457 291.936C93.8383 292.709 93.007 293.28 91.963 293.647ZM84.481 292.313H88.57C89.6527 292.313 90.4937 292.071 91.093 291.588C91.7117 291.085 92.021 290.37 92.021 289.442C92.021 288.533 91.7117 287.828 91.093 287.325C90.4937 286.803 89.6527 286.542 88.57 286.542H84.481V292.313ZM88.947 301.303C90.0683 301.303 90.948 301.032 91.586 300.491C92.224 299.95 92.543 299.196 92.543 298.229C92.543 297.243 92.2047 296.46 91.528 295.88C90.8513 295.3 89.9523 295.01 88.831 295.01H84.481V301.303H88.947ZM109.969 283.845V296.692C109.969 298.219 110.365 299.37 111.158 300.143C111.97 300.916 113.091 301.303 114.522 301.303C115.972 301.303 117.093 300.916 117.886 300.143C118.698 299.37 119.104 298.219 119.104 296.692V283.845H122.41V296.634C122.41 298.277 122.052 299.669 121.337 300.81C120.621 301.951 119.664 302.801 118.466 303.362C117.267 303.923 115.943 304.203 114.493 304.203C113.043 304.203 111.718 303.923 110.52 303.362C109.34 302.801 108.403 301.951 107.707 300.81C107.011 299.669 106.663 298.277 106.663 296.634V283.845H109.969ZM137.27 283.845V304H133.964V283.845H137.27ZM152.167 301.332H158.982V304H148.861V283.845H152.167V301.332ZM175.579 283.845C177.725 283.845 179.601 284.261 181.205 285.092C182.829 285.904 184.076 287.083 184.946 288.63C185.836 290.157 186.28 291.946 186.28 293.995C186.28 296.044 185.836 297.823 184.946 299.331C184.076 300.839 182.829 301.999 181.205 302.811C179.601 303.604 177.725 304 175.579 304H168.996V283.845H175.579ZM175.579 301.303C177.938 301.303 179.746 300.665 181.002 299.389C182.259 298.113 182.887 296.315 182.887 293.995C182.887 291.656 182.259 289.829 181.002 288.514C179.746 287.199 177.938 286.542 175.579 286.542H172.302V301.303H175.579ZM224.611 283.845V286.542H219.246V304H215.94V286.542H210.546V283.845H224.611ZM244.402 304.203C242.527 304.203 240.797 303.768 239.211 302.898C237.645 302.009 236.398 300.781 235.47 299.215C234.562 297.63 234.107 295.851 234.107 293.879C234.107 291.907 234.562 290.138 235.47 288.572C236.398 287.006 237.645 285.788 239.211 284.918C240.797 284.029 242.527 283.584 244.402 283.584C246.297 283.584 248.027 284.029 249.593 284.918C251.179 285.788 252.426 287.006 253.334 288.572C254.243 290.138 254.697 291.907 254.697 293.879C254.697 295.851 254.243 297.63 253.334 299.215C252.426 300.781 251.179 302.009 249.593 302.898C248.027 303.768 246.297 304.203 244.402 304.203ZM244.402 301.332C245.736 301.332 246.925 301.032 247.969 300.433C249.013 299.814 249.825 298.944 250.405 297.823C251.005 296.682 251.304 295.368 251.304 293.879C251.304 292.39 251.005 291.085 250.405 289.964C249.825 288.843 249.013 287.982 247.969 287.383C246.925 286.784 245.736 286.484 244.402 286.484C243.068 286.484 241.879 286.784 240.835 287.383C239.791 287.982 238.97 288.843 238.37 289.964C237.79 291.085 237.5 292.39 237.5 293.879C237.5 295.368 237.79 296.682 238.37 297.823C238.97 298.944 239.791 299.814 240.835 300.433C241.879 301.032 243.068 301.332 244.402 301.332ZM278.882 293.879C278.882 291.907 279.336 290.138 280.245 288.572C281.173 287.006 282.42 285.788 283.986 284.918C285.571 284.029 287.301 283.584 289.177 283.584C291.323 283.584 293.227 284.116 294.89 285.179C296.572 286.223 297.79 287.712 298.544 289.645H294.571C294.049 288.582 293.324 287.789 292.396 287.267C291.468 286.745 290.395 286.484 289.177 286.484C287.843 286.484 286.654 286.784 285.61 287.383C284.566 287.982 283.744 288.843 283.145 289.964C282.565 291.085 282.275 292.39 282.275 293.879C282.275 295.368 282.565 296.673 283.145 297.794C283.744 298.915 284.566 299.785 285.61 300.404C286.654 301.003 287.843 301.303 289.177 301.303C290.395 301.303 291.468 301.042 292.396 300.52C293.324 299.998 294.049 299.205 294.571 298.142H298.544C297.79 300.075 296.572 301.564 294.89 302.608C293.227 303.652 291.323 304.174 289.177 304.174C287.282 304.174 285.552 303.739 283.986 302.869C282.42 301.98 281.173 300.752 280.245 299.186C279.336 297.62 278.882 295.851 278.882 293.879ZM318.856 304.203C316.981 304.203 315.251 303.768 313.665 302.898C312.099 302.009 310.852 300.781 309.924 299.215C309.016 297.63 308.561 295.851 308.561 293.879C308.561 291.907 309.016 290.138 309.924 288.572C310.852 287.006 312.099 285.788 313.665 284.918C315.251 284.029 316.981 283.584 318.856 283.584C320.751 283.584 322.481 284.029 324.047 284.918C325.633 285.788 326.88 287.006 327.788 288.572C328.697 290.138 329.151 291.907 329.151 293.879C329.151 295.851 328.697 297.63 327.788 299.215C326.88 300.781 325.633 302.009 324.047 302.898C322.481 303.768 320.751 304.203 318.856 304.203ZM318.856 301.332C320.19 301.332 321.379 301.032 322.423 300.433C323.467 299.814 324.279 298.944 324.859 297.823C325.459 296.682 325.758 295.368 325.758 293.879C325.758 292.39 325.459 291.085 324.859 289.964C324.279 288.843 323.467 287.982 322.423 287.383C321.379 286.784 320.19 286.484 318.856 286.484C317.522 286.484 316.333 286.784 315.289 287.383C314.245 287.982 313.424 288.843 312.824 289.964C312.244 291.085 311.954 292.39 311.954 293.879C311.954 295.368 312.244 296.682 312.824 297.823C313.424 298.944 314.245 299.814 315.289 300.433C316.333 301.032 317.522 301.332 318.856 301.332ZM348.847 304.203C346.972 304.203 345.242 303.768 343.656 302.898C342.09 302.009 340.843 300.781 339.915 299.215C339.007 297.63 338.552 295.851 338.552 293.879C338.552 291.907 339.007 290.138 339.915 288.572C340.843 287.006 342.09 285.788 343.656 284.918C345.242 284.029 346.972 283.584 348.847 283.584C350.742 283.584 352.472 284.029 354.038 284.918C355.624 285.788 356.871 287.006 357.779 288.572C358.688 290.138 359.142 291.907 359.142 293.879C359.142 295.851 358.688 297.63 357.779 299.215C356.871 300.781 355.624 302.009 354.038 302.898C352.472 303.768 350.742 304.203 348.847 304.203ZM348.847 301.332C350.181 301.332 351.37 301.032 352.414 300.433C353.458 299.814 354.27 298.944 354.85 297.823C355.45 296.682 355.749 295.368 355.749 293.879C355.749 292.39 355.45 291.085 354.85 289.964C354.27 288.843 353.458 287.982 352.414 287.383C351.37 286.784 350.181 286.484 348.847 286.484C347.513 286.484 346.324 286.784 345.28 287.383C344.236 287.982 343.415 288.843 342.815 289.964C342.235 291.085 341.945 292.39 341.945 293.879C341.945 295.368 342.235 296.682 342.815 297.823C343.415 298.944 344.236 299.814 345.28 300.433C346.324 301.032 347.513 301.332 348.847 301.332ZM372.952 301.332H379.767V304H369.646V283.845H372.952V301.332Z"
+          />
+        </g>
+      </symbol>
+    </svg>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+      <div class="container nav-inner">
+        <a href="#" class="logo" aria-label="Cold Moose - Build to Cool">
+          <svg
+            viewBox="0 0 470 305"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-hidden="true"
+          >
+            <use href="#cm-logo" />
+          </svg>
+        </a>
+        <div class="nav-links" id="navLinks">
+          <a href="#challenges">Challenges</a>
+          <a href="#solutions">Solutions</a>
+          <a href="#expertise">Expertise</a>
+          <a href="#process">Process</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact" class="nav-cta">Request Consultation</a>
+        </div>
+        <button class="burger" id="burger" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="reveal">
+            <span class="hero-eyebrow"
+              ><i class="fa-solid fa-wine-glass"></i> Ontario's Winery
+              Refrigeration Specialists</span
+            >
+            <h1>
+              Advanced Refrigeration Solutions for
+              <span class="accent">Wineries &amp; Vineyards</span> Across
+              Ontario
+            </h1>
+            <p class="hero-sub">
+              ColdMoose engineers premium temperature-controlled storage and
+              precision cooling systems for wineries, barrel rooms, wine
+              cellars, and commercial wine production facilities — protecting
+              the quality, aging integrity, and inventory value of Ontario's
+              finest wines.
+            </p>
+            <div class="hero-ctas">
+              <a href="#contact" class="btn btn-primary"
+                ><i class="fa-solid fa-calendar-check"></i> Request
+                Refrigeration Consultation</a
+              >
+              <a href="#contact" class="btn btn-ghost"
+                ><i class="fa-solid fa-headset"></i> Talk to a Specialist</a
+              >
+            </div>
+            <div class="hero-trust">
+              <div class="trust-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span><strong>25+ Years</strong>Refrigeration Authority</span>
+              </div>
+              <div class="trust-item">
+                <i class="fa-solid fa-temperature-low"></i>
+                <span><strong>±0.5°C</strong>Precision Control</span>
+              </div>
+              <div class="trust-item">
+                <i class="fa-solid fa-map-pin"></i>
+                <span><strong>Ontario-Wide</strong>On-Site Service</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card reveal">
+            <span class="tag">Live System Telemetry</span>
+            <h3>Barrel Room — Niagara Estate</h3>
+            <p>
+              Real-time conditions inside a ColdMoose-engineered aging
+              environment.
+            </p>
+            <div class="specs">
+              <div class="spec">
+                <div class="label">Temperature</div>
+                <div class="value">13.2<span>°C</span></div>
+              </div>
+              <div class="spec">
+                <div class="label">Humidity</div>
+                <div class="value">72<span>%RH</span></div>
+              </div>
+              <div class="spec">
+                <div class="label">Airflow</div>
+                <div class="value">Laminar<span>low-vel</span></div>
+              </div>
+              <div class="spec">
+                <div class="label">Uptime</div>
+                <div class="value">99.97<span>%</span></div>
+              </div>
+            </div>
+            <div class="progress"><span></span></div>
+            <div class="progress-label">
+              <span>System Efficiency</span
+              ><strong style="color: var(--secondary)">92% optimal</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MARQUEE -->
+    <div class="marquee">
+      <div class="marquee-track">
+        <span class="marquee-item"
+          ><i class="fa-solid fa-wine-bottle"></i> Boutique Wineries</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-warehouse"></i> Barrel Rooms</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-temperature-low"></i> Wine Cellars</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-industry"></i> Production Facilities</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-truck"></i> Distribution Centres</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-leaf"></i> Vineyard Operations</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-snowflake"></i> Walk-In Storage</span
+        >
+        <!-- duplicate -->
+        <span class="marquee-item"
+          ><i class="fa-solid fa-wine-bottle"></i> Boutique Wineries</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-warehouse"></i> Barrel Rooms</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-temperature-low"></i> Wine Cellars</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-industry"></i> Production Facilities</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-truck"></i> Distribution Centres</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-leaf"></i> Vineyard Operations</span
+        >
+        <span class="marquee-item"
+          ><i class="fa-solid fa-snowflake"></i> Walk-In Storage</span
+        >
+      </div>
+    </div>
+
+    <!-- CHALLENGES -->
+    <section class="challenges" id="challenges">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">The Winery Reality</span>
+          <h2>
+            The Refrigeration Challenges <span>Threatening Wine Quality</span>
+          </h2>
+          <p>
+            Premium wine demands premium conditions. Every fluctuation in
+            temperature, every imbalance in humidity, every inefficient system
+            silently erodes the value of your inventory and the integrity of
+            your craft.
+          </p>
+        </div>
+        <div class="challenges-grid">
+          <div class="challenge-card reveal">
+            <span class="challenge-num">01</span>
+            <div class="challenge-icon">
+              <i class="fa-solid fa-temperature-three-quarters"></i>
+            </div>
+            <h3>Temperature Fluctuation</h3>
+            <p>
+              Inconsistent cellar temperatures accelerate oxidation, disrupt
+              phenolic maturation, and compromise the structural integrity of
+              vintage wines.
+            </p>
+          </div>
+          <div class="challenge-card reveal">
+            <span class="challenge-num">02</span>
+            <div class="challenge-icon">
+              <i class="fa-solid fa-droplet"></i>
+            </div>
+            <h3>Humidity Imbalance</h3>
+            <p>
+              Low humidity dries corks and increases evaporation loss. Excess
+              humidity damages labels and invites microbial growth in barrel
+              rooms.
+            </p>
+          </div>
+          <div class="challenge-card reveal">
+            <span class="challenge-num">03</span>
+            <div class="challenge-icon">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <h3>Wine Spoilage Risk</h3>
+            <p>
+              Without precision climate control, premium vintages are exposed to
+              heat shock, premature aging, and irreversible quality degradation.
+            </p>
+          </div>
+          <div class="challenge-card reveal">
+            <span class="challenge-num">04</span>
+            <div class="challenge-icon"><i class="fa-solid fa-wind"></i></div>
+            <h3>Inadequate Barrel Room Cooling</h3>
+            <p>
+              Improper airflow design and undersized refrigeration systems
+              create thermal gradients that compromise consistent oak
+              interaction and aging.
+            </p>
+          </div>
+          <div class="challenge-card reveal">
+            <span class="challenge-num">05</span>
+            <div class="challenge-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3>Operational Inefficiency</h3>
+            <p>
+              Outdated equipment drives up energy costs, increases service
+              incidents, and pulls budget away from production and growth.
+            </p>
+          </div>
+          <div class="challenge-card reveal">
+            <span class="challenge-num">06</span>
+            <div class="challenge-icon">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <h3>Equipment Reliability</h3>
+            <p>
+              A single refrigeration failure can endanger entire vintages. Aging
+              compressors and unsupported systems amplify risk to inventory.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="benefits">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Why ColdMoose</span>
+          <h2>Engineered Benefits <span>Built for Wine Preservation</span></h2>
+          <p>
+            Every system we deploy is designed to protect the long-term value of
+            your wine, your operation, and your investment — with technical
+            precision matched to the demands of premium production.
+          </p>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-temperature-low"></i>
+            </div>
+            <h4>Precise Temperature Control</h4>
+            <p>
+              ±0.5°C accuracy across every zone for consistent wine aging and
+              storage stability.
+            </p>
+          </div>
+          <div class="benefit-card reveal">
+            <div class="benefit-icon"><i class="fa-solid fa-droplet"></i></div>
+            <h4>Humidity Optimization</h4>
+            <p>
+              Maintain 60–75% RH to preserve cork integrity and prevent
+              evaporation loss.
+            </p>
+          </div>
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-wine-bottle"></i>
+            </div>
+            <h4>Wine Preservation</h4>
+            <p>
+              Stable conditions that protect varietal character, structure, and
+              aromatic complexity.
+            </p>
+          </div>
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-hourglass-half"></i>
+            </div>
+            <h4>Controlled Aging Environment</h4>
+            <p>
+              Climate engineered to support consistent maturation across
+              vintages and varietals.
+            </p>
+          </div>
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-gauge-high"></i>
+            </div>
+            <h4>Reliable Performance</h4>
+            <p>
+              Commercial-grade systems built for 24/7 operation across decades
+              of service life.
+            </p>
+          </div>
+          <div class="benefit-card reveal">
+            <div class="benefit-icon"><i class="fa-solid fa-leaf"></i></div>
+            <h4>Energy Efficient</h4>
+            <p>
+              High-efficiency compressors and EC fans cut operating costs by up
+              to 35%.
+            </p>
+          </div>
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-warehouse"></i>
+            </div>
+            <h4>Commercial-Grade Systems</h4>
+            <p>
+              Industrial-strength refrigeration scaled for boutique through
+              enterprise wineries.
+            </p>
+          </div>
+          <div class="benefit-card reveal">
+            <div class="benefit-icon"><i class="fa-solid fa-expand"></i></div>
+            <h4>Scalable Solutions</h4>
+            <p>
+              Modular designs that grow with your operation — from cellar to
+              commercial.
+            </p>
+          </div>
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-box-archive"></i>
+            </div>
+            <h4>Barrel Room Cooling</h4>
+            <p>
+              Low-velocity airflow that protects oak interaction and barrel-aged
+              complexity.
+            </p>
+          </div>
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-snowflake"></i>
+            </div>
+            <h4>Wine Cellar Refrigeration</h4>
+            <p>
+              Purpose-built cellar systems with vibration-isolated, ultra-quiet
+              operation.
+            </p>
+          </div>
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h4>Inventory Protection</h4>
+            <p>
+              Multi-stage safeguards and remote monitoring to protect every
+              bottle in storage.
+            </p>
+          </div>
+          <div class="benefit-card reveal">
+            <div class="benefit-icon">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <h4>Long-Term Reliability</h4>
+            <p>
+              Ongoing maintenance, technical support, and full lifecycle service
+              partnership.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL EXPERTISE -->
+    <section class="tech" id="expertise">
+      <div class="container">
+        <div class="tech-grid">
+          <div class="reveal">
+            <span class="eyebrow">Technical Refrigeration Expertise</span>
+            <h2>
+              Engineering the <span>Perfect Climate</span> for Premium Wine
+            </h2>
+            <p class="lead">
+              ColdMoose designs and engineers winery refrigeration systems with
+              the precision of a laboratory and the durability of industrial
+              process cooling. Every variable — temperature, humidity, airflow,
+              refrigerant performance — is calibrated to protect the integrity
+              of your wine through every stage of production, aging, and
+              storage.
+            </p>
+            <div class="tech-features">
+              <div class="tech-feat">
+                <i class="fa-solid fa-check"></i> Temperature-Controlled Wine
+                Storage
+              </div>
+              <div class="tech-feat">
+                <i class="fa-solid fa-check"></i> Humidity-Controlled
+                Environments
+              </div>
+              <div class="tech-feat">
+                <i class="fa-solid fa-check"></i> Precision Cooling Systems
+              </div>
+              <div class="tech-feat">
+                <i class="fa-solid fa-check"></i> Airflow Optimization
+                Engineering
+              </div>
+              <div class="tech-feat">
+                <i class="fa-solid fa-check"></i> Low-Velocity Evaporators
+              </div>
+              <div class="tech-feat">
+                <i class="fa-solid fa-check"></i> Controlled Aging Conditions
+              </div>
+              <div class="tech-feat">
+                <i class="fa-solid fa-check"></i> Energy-Efficient Refrigeration
+              </div>
+              <div class="tech-feat">
+                <i class="fa-solid fa-check"></i> Green Refrigerant Technology
+              </div>
+              <div class="tech-feat">
+                <i class="fa-solid fa-check"></i> Barrel Storage Cooling
+              </div>
+              <div class="tech-feat">
+                <i class="fa-solid fa-check"></i> Wine Cellar Climate Control
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary"
+              ><i class="fa-solid fa-arrow-right-long"></i> Discuss Your
+              Refrigeration Project</a
+            >
+          </div>
+          <div class="tech-visual reveal">
+            <img
+              src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?auto=format&fit=crop&w=1200&q=80"
+              alt="Wine barrel storage room with precision climate control"
+            />
+            <div class="tech-stat-strip">
+              <div class="num">
+                ±0.5<span style="font-size: 1.2rem">°C</span>
+              </div>
+              <div class="lbl">Thermal Precision</div>
+            </div>
+            <div class="tech-overlay">
+              <span class="badge">Niagara Project</span>
+              <h4>Barrel Aging Climate Suite</h4>
+              <p>
+                Engineered for laminar low-velocity airflow with isolated
+                humidity zoning across 18,000 sq ft of barrel storage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTIONS -->
+    <section class="solutions" id="solutions">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Our Solutions</span>
+          <h2>
+            Complete Refrigeration Solutions <span>for the Wine Industry</span>
+          </h2>
+          <p>
+            From boutique wine cellars to industrial production facilities, we
+            design custom-engineered refrigeration systems tailored to your
+            operation, your wine, and your long-term vision.
+          </p>
+        </div>
+        <div class="solutions-grid">
+          <div class="sol-card reveal">
+            <div class="sol-img">
+              <img
+                src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=900&q=80"
+                alt="Winery refrigeration system"
+              />
+              <span class="sol-icon"
+                ><i class="fa-solid fa-snowflake"></i
+              ></span>
+            </div>
+            <div class="sol-body">
+              <h4>Winery Refrigeration Systems</h4>
+              <p>
+                Complete facility refrigeration engineered for fermentation,
+                tank cooling, storage, and production environments.
+              </p>
+              <span class="sol-link"
+                >Learn more <i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </div>
+          </div>
+          <div class="sol-card reveal">
+            <div class="sol-img">
+              <img
+                src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80"
+                alt="Wine cellar cooling"
+              />
+              <span class="sol-icon"
+                ><i class="fa-solid fa-wine-glass"></i
+              ></span>
+            </div>
+            <div class="sol-body">
+              <h4>Wine Cellar Cooling</h4>
+              <p>
+                Precision climate control for private and commercial cellars,
+                with vibration-isolated, ultra-quiet operation.
+              </p>
+              <span class="sol-link"
+                >Learn more <i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </div>
+          </div>
+          <div class="sol-card reveal">
+            <div class="sol-img">
+              <img
+                src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?auto=format&fit=crop&w=900&q=80"
+                alt="Barrel room refrigeration"
+              />
+              <span class="sol-icon"
+                ><i class="fa-solid fa-box-archive"></i
+              ></span>
+            </div>
+            <div class="sol-body">
+              <h4>Barrel Room Refrigeration</h4>
+              <p>
+                Low-velocity, humidity-stable environments designed to protect
+                oak interaction and aging consistency.
+              </p>
+              <span class="sol-link"
+                >Learn more <i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </div>
+          </div>
+          <div class="sol-card reveal">
+            <div class="sol-img">
+              <img
+                src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80"
+                alt="Commercial wine storage"
+              />
+              <span class="sol-icon"
+                ><i class="fa-solid fa-warehouse"></i
+              ></span>
+            </div>
+            <div class="sol-body">
+              <h4>Commercial Wine Storage</h4>
+              <p>
+                Large-scale, temperature-controlled storage solutions engineered
+                for distributors and high-volume operators.
+              </p>
+              <span class="sol-link"
+                >Learn more <i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </div>
+          </div>
+          <div class="sol-card reveal">
+            <div class="sol-img">
+              <img
+                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=80"
+                alt="Vineyard cooling"
+              />
+              <span class="sol-icon"><i class="fa-solid fa-leaf"></i></span>
+            </div>
+            <div class="sol-body">
+              <h4>Vineyard Cooling Systems</h4>
+              <p>
+                Grape reception, must cooling, and process refrigeration
+                designed for harvest season demand.
+              </p>
+              <span class="sol-link"
+                >Learn more <i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </div>
+          </div>
+          <div class="sol-card reveal">
+            <div class="sol-img">
+              <img
+                src="https://images.unsplash.com/photo-1528823872057-9c018a7a7553?auto=format&fit=crop&w=900&q=80"
+                alt="Walk-in wine storage"
+              />
+              <span class="sol-icon"
+                ><i class="fa-solid fa-door-open"></i
+              ></span>
+            </div>
+            <div class="sol-body">
+              <h4>Walk-In Wine Storage Rooms</h4>
+              <p>
+                Custom-built walk-ins with premium insulation, modular sizing,
+                and integrated climate monitoring.
+              </p>
+              <span class="sol-link"
+                >Learn more <i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </div>
+          </div>
+          <div class="sol-card reveal">
+            <div class="sol-img">
+              <img
+                src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=900&q=80"
+                alt="Temperature controlled warehousing"
+              />
+              <span class="sol-icon"
+                ><i class="fa-solid fa-truck-fast"></i
+              ></span>
+            </div>
+            <div class="sol-body">
+              <h4>Temperature-Controlled Warehousing</h4>
+              <p>
+                Full-scale logistics-grade refrigeration for distribution
+                facilities, fulfilment, and bonded storage.
+              </p>
+              <span class="sol-link"
+                >Learn more <i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </div>
+          </div>
+          <div class="sol-card reveal">
+            <div class="sol-img">
+              <img
+                src="https://images.unsplash.com/photo-1581094651181-35942459ef62?auto=format&fit=crop&w=900&q=80"
+                alt="Custom winery refrigeration engineering"
+              />
+              <span class="sol-icon"
+                ><i class="fa-solid fa-pen-ruler"></i
+              ></span>
+            </div>
+            <div class="sol-body">
+              <h4>Custom Winery Engineering</h4>
+              <p>
+                Bespoke refrigeration design and integration tailored to your
+                facility, climate, and production profile.
+              </p>
+              <span class="sol-link"
+                >Learn more <i class="fa-solid fa-arrow-right"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCALE -->
+    <section class="scale">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Built for Every Scale</span>
+          <h2>
+            From Boutique Cellars to <span>Industrial Wine Production</span>
+          </h2>
+          <p>
+            ColdMoose engineers refrigeration systems with the flexibility of
+            modular design and the depth of enterprise-grade integration —
+            purpose-built to match the size, complexity, and ambition of your
+            operation.
+          </p>
+        </div>
+        <div class="scale-grid">
+          <div class="scale-card reveal">
+            <div class="scale-circle">
+              <i class="fa-solid fa-wine-bottle"></i>
+            </div>
+            <span class="scale-tag">Tier 01</span>
+            <h4>Boutique Wineries</h4>
+            <p>
+              Family-owned wineries crafting limited production runs with
+              uncompromising quality standards.
+            </p>
+          </div>
+          <div class="scale-card reveal">
+            <div class="scale-circle">
+              <i class="fa-solid fa-wine-glass"></i>
+            </div>
+            <span class="scale-tag">Tier 02</span>
+            <h4>Mid-Sized Operations</h4>
+            <p>
+              Established producers scaling distribution while maintaining
+              artisanal craftsmanship.
+            </p>
+          </div>
+          <div class="scale-card reveal">
+            <div class="scale-circle">
+              <i class="fa-solid fa-warehouse"></i>
+            </div>
+            <span class="scale-tag">Tier 03</span>
+            <h4>Large Commercial Vineyards</h4>
+            <p>
+              High-volume producers with multi-zone facilities and complex
+              refrigeration loads.
+            </p>
+          </div>
+          <div class="scale-card reveal">
+            <div class="scale-circle"><i class="fa-solid fa-industry"></i></div>
+            <span class="scale-tag">Tier 04</span>
+            <h4>Industrial Wine Production</h4>
+            <p>
+              Enterprise-grade facilities requiring integrated refrigeration
+              across production, storage, and logistics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Our Process</span>
+          <h2>
+            A Refined Engineering Process —
+            <span>From Vineyard to Vintage</span>
+          </h2>
+          <p>
+            A clear, structured engagement designed to deliver refrigeration
+            systems that protect your wine and your investment for decades.
+          </p>
+        </div>
+        <div class="process-timeline">
+          <div class="step reveal">
+            <div class="step-num"><span>01</span></div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h4>Consultation &amp; Winery Assessment</h4>
+            <p>
+              On-site evaluation of your facility, refrigeration needs,
+              environmental conditions, and long-term goals.
+            </p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num"><span>02</span></div>
+            <i class="fa-solid fa-pen-ruler"></i>
+            <h4>Custom Refrigeration Planning</h4>
+            <p>
+              Engineered system design with thermal load calculations,
+              refrigerant selection, and equipment specification.
+            </p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num"><span>03</span></div>
+            <i class="fa-solid fa-hammer"></i>
+            <h4>Installation &amp; System Integration</h4>
+            <p>
+              Professional installation by trained refrigeration technicians,
+              with full commissioning and performance validation.
+            </p>
+          </div>
+          <div class="step reveal">
+            <div class="step-num"><span>04</span></div>
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <h4>Maintenance &amp; Technical Support</h4>
+            <p>
+              Preventative servicing, remote monitoring, and rapid-response
+              technical support for the lifetime of the system.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UMBRELLA -->
+    <section class="umbrella">
+      <div class="container">
+        <div class="umbrella-grid">
+          <div class="reveal">
+            <span class="eyebrow">Under One Umbrella</span>
+            <h2>Your <span>Complete</span> Winery Refrigeration Partner</h2>
+            <p class="lead">
+              From the first consultation through decades of operation,
+              ColdMoose delivers every dimension of winery refrigeration under
+              one trusted, technical, end-to-end partnership.
+            </p>
+            <a href="#contact" class="btn btn-primary"
+              ><i class="fa-solid fa-handshake"></i> Partner With Our Team</a
+            >
+          </div>
+          <div class="umbrella-list reveal">
+            <div class="umbrella-item">
+              <div class="ic"><i class="fa-solid fa-comments"></i></div>
+              <div>
+                <h5>Consultation</h5>
+                <p>
+                  Discovery, site walkthroughs, and refrigeration strategy
+                  planning.
+                </p>
+              </div>
+            </div>
+            <div class="umbrella-item">
+              <div class="ic"><i class="fa-solid fa-microchip"></i></div>
+              <div>
+                <h5>Engineering</h5>
+                <p>
+                  Custom system architecture by experienced refrigeration
+                  engineers.
+                </p>
+              </div>
+            </div>
+            <div class="umbrella-item">
+              <div class="ic"><i class="fa-solid fa-pen-ruler"></i></div>
+              <div>
+                <h5>System Design</h5>
+                <p>
+                  Thermal load modelling, equipment specification, and layout
+                  planning.
+                </p>
+              </div>
+            </div>
+            <div class="umbrella-item">
+              <div class="ic"><i class="fa-solid fa-hammer"></i></div>
+              <div>
+                <h5>Installation</h5>
+                <p>
+                  Certified installation, commissioning, and integration with
+                  your facility.
+                </p>
+              </div>
+            </div>
+            <div class="umbrella-item">
+              <div class="ic"><i class="fa-solid fa-shield-halved"></i></div>
+              <div>
+                <h5>Preventative Maintenance</h5>
+                <p>
+                  Scheduled service to keep your systems performing at peak
+                  efficiency.
+                </p>
+              </div>
+            </div>
+            <div class="umbrella-item">
+              <div class="ic"><i class="fa-solid fa-headset"></i></div>
+              <div>
+                <h5>Technical Servicing</h5>
+                <p>
+                  Trained on-site technicians for diagnostics, repair, and
+                  optimization.
+                </p>
+              </div>
+            </div>
+            <div class="umbrella-item">
+              <div class="ic"><i class="fa-solid fa-infinity"></i></div>
+              <div>
+                <h5>Long-Term Support</h5>
+                <p>
+                  Lifetime relationship as your refrigeration evolves with your
+                  operation.
+                </p>
+              </div>
+            </div>
+            <div class="umbrella-item">
+              <div class="ic"><i class="fa-solid fa-bolt"></i></div>
+              <div>
+                <h5>Emergency Response</h5>
+                <p>
+                  Rapid technical response to protect inventory when every
+                  minute matters.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINANCING -->
+    <section class="financing">
+      <div class="container">
+        <div class="financing-card reveal">
+          <div class="financing-grid">
+            <div>
+              <div class="partner-strip">
+                <span class="pill">In Partnership With</span>
+                <span>Econolease Financial Services</span>
+              </div>
+              <h2>Premium Refrigeration. <span>Flexible Financing.</span></h2>
+              <p>
+                We understand that winery refrigeration is a long-term
+                investment. Through our partnership with Econolease, ColdMoose
+                offers structured financing solutions designed to support your
+                operation's growth without compromising on technical quality.
+              </p>
+              <div class="options">
+                <span class="tag"
+                  ><i class="fa-solid fa-check"></i> Equipment Financing</span
+                >
+                <span class="tag"
+                  ><i class="fa-solid fa-check"></i> Operating Leases</span
+                >
+                <span class="tag"
+                  ><i class="fa-solid fa-check"></i> Capital Lease Options</span
+                >
+                <span class="tag"
+                  ><i class="fa-solid fa-check"></i> Phased Project
+                  Structures</span
+                >
+              </div>
+            </div>
+            <div class="financing-side">
+              <div class="icon">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+              </div>
+              <h4>Discuss Financing</h4>
+              <p>
+                Tailored project structures aligned to your operational cash
+                flow and growth roadmap.
+              </p>
+              <a
+                href="#contact"
+                class="btn btn-primary"
+                style="display: inline-flex"
+                >Explore Options <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RENTAL -->
+    <section class="rental">
+      <div class="container">
+        <div class="rental-grid">
+          <div class="reveal">
+            <div class="partner-strip-light">
+              <span class="pill">Powered By Econolease</span>
+              <span>Rental &amp; Equipment Leasing Specialists</span>
+            </div>
+            <h2>
+              Rent Premium Winery Refrigeration —
+              <span>Without the Capital Outlay</span>
+            </h2>
+            <p class="lead">
+              For wineries focused on protecting cash flow, scaling production,
+              or accessing premium refrigeration without a major upfront
+              investment, ColdMoose offers full equipment rental programs
+              through our partner <strong>Econolease</strong> — Canada's trusted
+              commercial equipment leasing authority.
+            </p>
+            <div class="rental-points">
+              <div class="rental-point">
+                <div class="ic">
+                  <i class="fa-solid fa-money-bill-trend-up"></i>
+                </div>
+                <div>
+                  <h5>Preserve Working Capital</h5>
+                  <p>
+                    Avoid large upfront equipment costs — keep capital deployed
+                    in production, vineyards, and brand growth.
+                  </p>
+                </div>
+              </div>
+              <div class="rental-point">
+                <div class="ic"><i class="fa-solid fa-calendar-days"></i></div>
+                <div>
+                  <h5>Flexible Term Lengths</h5>
+                  <p>
+                    Rental structures from 24 to 84 months, aligned with your
+                    operational planning and tax strategy.
+                  </p>
+                </div>
+              </div>
+              <div class="rental-point">
+                <div class="ic"><i class="fa-solid fa-receipt"></i></div>
+                <div>
+                  <h5>Tax-Deductible Payments</h5>
+                  <p>
+                    Monthly rental payments may be treated as fully deductible
+                    operating expenses for your business.
+                  </p>
+                </div>
+              </div>
+              <div class="rental-point">
+                <div class="ic"><i class="fa-solid fa-shield-halved"></i></div>
+                <div>
+                  <h5>Maintenance Included</h5>
+                  <p>
+                    Bundled service packages keep your refrigeration systems
+                    performing — no surprise repair costs.
+                  </p>
+                </div>
+              </div>
+              <div class="rental-point">
+                <div class="ic"><i class="fa-solid fa-arrows-rotate"></i></div>
+                <div>
+                  <h5>Easy Upgrade Path</h5>
+                  <p>
+                    Scale or upgrade your refrigeration capacity as your winery
+                    grows — without disposing of old equipment.
+                  </p>
+                </div>
+              </div>
+              <div class="rental-point">
+                <div class="ic"><i class="fa-solid fa-bolt"></i></div>
+                <div>
+                  <h5>Fast Approvals</h5>
+                  <p>
+                    Streamlined Econolease application process with rapid
+                    decisions and minimal documentation.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-dark"
+              ><i class="fa-solid fa-file-signature"></i> Request a Rental
+              Quote</a
+            >
+          </div>
+
+          <div class="rental-visual reveal">
+            <div class="rental-visual-inner">
+              <span
+                style="
+                  display: inline-block;
+                  padding: 5px 12px;
+                  border-radius: 8px;
+                  background: rgba(83, 248, 255, 0.18);
+                  color: var(--secondary);
+                  font-size: 0.72rem;
+                  font-weight: 700;
+                  letter-spacing: 0.18em;
+                  text-transform: uppercase;
+                  margin-bottom: 14px;
+                "
+                >Sample Rental Structure</span
+              >
+              <h3>Boutique Winery Cooling Package</h3>
+              <p class="sub">
+                Indicative monthly rental for a typical small-to-mid winery
+                refrigeration deployment.
+              </p>
+              <div class="rental-terms">
+                <div class="rental-term">
+                  <div class="lbl">Term Length</div>
+                  <div class="val">60<span>months</span></div>
+                </div>
+                <div class="rental-term">
+                  <div class="lbl">Upfront Cost</div>
+                  <div class="val">$0<span>down</span></div>
+                </div>
+                <div class="rental-term">
+                  <div class="lbl">Coverage</div>
+                  <div class="val">Full<span>service</span></div>
+                </div>
+                <div class="rental-term">
+                  <div class="lbl">Approval</div>
+                  <div class="val">24<span>hrs</span></div>
+                </div>
+              </div>
+              <div class="rental-quote">
+                <i class="fa-solid fa-quote-right"></i>
+                <p>
+                  Renting our refrigeration through Econolease let us deploy
+                  premium equipment immediately — without diverting capital from
+                  our barrel program or vineyard expansion.
+                </p>
+              </div>
+              <div class="econo-bar">
+                <div class="left">
+                  <div class="badge-ic">
+                    <i class="fa-solid fa-handshake"></i>
+                  </div>
+                  <div>
+                    <div class="label">Financing Partner</div>
+                    <div class="name">Econolease Financial Services</div>
+                  </div>
+                </div>
+                <i
+                  class="fa-solid fa-check-double"
+                  style="color: var(--secondary)"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section class="trust">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Trust &amp; Credibility</span>
+          <h2>
+            Ontario's <span>Trusted Refrigeration Authority</span> for Wine
+            Producers
+          </h2>
+          <p>
+            Two decades of refrigeration expertise. Hundreds of installations.
+            Built on technical depth, local service, and long-term partnerships
+            across Ontario's wine industry.
+          </p>
+        </div>
+        <div class="trust-stats">
+          <div class="stat-card reveal">
+            <div class="stat-num">25<span class="plus">+</span></div>
+            <div class="lbl">Years of Refrigeration Expertise</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-num">450<span class="plus">+</span></div>
+            <div class="lbl">Commercial Installations</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-num">99<span class="plus">%</span></div>
+            <div class="lbl">System Uptime Reliability</div>
+          </div>
+          <div class="stat-card reveal">
+            <div class="stat-num">24<span class="plus">/7</span></div>
+            <div class="lbl">Emergency Response Coverage</div>
+          </div>
+        </div>
+        <div class="trust-features">
+          <div class="trust-feat reveal">
+            <div class="ic"><i class="fa-solid fa-map-location-dot"></i></div>
+            <div>
+              <h5>Ontario-Focused Support</h5>
+              <p>
+                Local technicians serving Niagara, Prince Edward County, and
+                wine regions across the province.
+              </p>
+            </div>
+          </div>
+          <div class="trust-feat reveal">
+            <div class="ic"><i class="fa-solid fa-user-graduate"></i></div>
+            <div>
+              <h5>Certified Technicians</h5>
+              <p>
+                Licensed refrigeration mechanics with deep experience in winery
+                and process cooling.
+              </p>
+            </div>
+          </div>
+          <div class="trust-feat reveal">
+            <div class="ic"><i class="fa-solid fa-leaf"></i></div>
+            <div>
+              <h5>Energy-Efficient Systems</h5>
+              <p>
+                Green refrigerant technology and high-efficiency components that
+                lower lifetime operating costs.
+              </p>
+            </div>
+          </div>
+          <div class="trust-feat reveal">
+            <div class="ic"><i class="fa-solid fa-medal"></i></div>
+            <div>
+              <h5>Commercial-Grade Reliability</h5>
+              <p>
+                Industrial-grade equipment engineered for continuous operation
+                under demanding winery conditions.
+              </p>
+            </div>
+          </div>
+          <div class="trust-feat reveal">
+            <div class="ic"><i class="fa-solid fa-handshake-angle"></i></div>
+            <div>
+              <h5>Long-Term Partnerships</h5>
+              <p>
+                Dedicated account management and lifetime servicing for every
+                system we install.
+              </p>
+            </div>
+          </div>
+          <div class="trust-feat reveal">
+            <div class="ic"><i class="fa-solid fa-flag"></i></div>
+            <div>
+              <h5>Canadian Service</h5>
+              <p>
+                Proudly Ontario-owned with rapid local response and
+                Canadian-sourced parts and support.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial reveal">
+          <blockquote>
+            ColdMoose engineered a barrel room refrigeration system that
+            delivers the temperature stability and humidity precision our
+            reserve program demanded. The result has been measurably better
+            aging consistency — and complete peace of mind.
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div class="info">
+              <strong>Marcus Bélanger</strong>
+              <span>Operations Director · Niagara Peninsula Estate Winery</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMERGENCY -->
+    <section class="emergency">
+      <div class="container">
+        <div class="emergency-inner">
+          <div class="reveal">
+            <span class="badge-247">24/7 Emergency Response</span>
+            <h2>
+              When Wine Inventory Is on the Line — <span>We Respond.</span>
+            </h2>
+            <p>
+              Refrigeration failures don't wait for business hours. ColdMoose's
+              emergency response program protects your wine inventory with rapid
+              technical dispatch, temporary cooling solutions, and on-site
+              recovery — every hour, every day.
+            </p>
+            <div class="emergency-features">
+              <div class="emergency-feat">
+                <i class="fa-solid fa-bolt"></i> Rapid technical dispatch
+              </div>
+              <div class="emergency-feat">
+                <i class="fa-solid fa-shield-halved"></i> Inventory protection
+                protocols
+              </div>
+              <div class="emergency-feat">
+                <i class="fa-solid fa-snowflake"></i> Temporary cooling
+                solutions
+              </div>
+              <div class="emergency-feat">
+                <i class="fa-solid fa-stopwatch"></i> Priority response SLAs
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary"
+              ><i class="fa-solid fa-phone"></i> Activate Emergency Support</a
+            >
+          </div>
+          <div class="emergency-call reveal">
+            <div class="icon"><i class="fa-solid fa-phone-volume"></i></div>
+            <div class="lbl">Emergency Refrigeration Line</div>
+            <h3>Always Operational</h3>
+            <div class="phone">1-800-COLDMOOSE</div>
+            <p
+              style="
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 0.9rem;
+                margin-bottom: 18px;
+              "
+            >
+              Ontario-wide rapid response. Wine industry priority dispatch.
+            </p>
+            <a href="#contact" class="btn btn-ghost"
+              ><i class="fa-solid fa-arrow-right"></i> Set Up Priority
+              Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="faq-grid">
+          <div class="faq-side reveal">
+            <span class="eyebrow">Frequently Asked Questions</span>
+            <h2>Answers from <span>Refrigeration Specialists</span></h2>
+            <p>
+              Common questions from Ontario winery operators on temperature
+              control, humidity, system design, and long-term refrigeration
+              partnerships.
+            </p>
+            <div class="faq-help">
+              <div class="ic"><i class="fa-solid fa-comments"></i></div>
+              <div>
+                <h5>Don't see your question?</h5>
+                <p>
+                  Speak directly with a
+                  <a href="#contact">winery refrigeration specialist</a> — we'll
+                  answer your technical questions in detail.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="faq-list">
+            <div class="faq-item">
+              <div class="faq-q">
+                What is the ideal temperature for wine storage and aging?<span
+                  class="toggle"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </div>
+              <div class="faq-a">
+                Premium wine storage and aging is most stable between 12°C and
+                14°C, with daily and seasonal fluctuation kept under ±1°C.
+                ColdMoose systems are engineered for ±0.5°C precision across
+                every zone, matched to your specific varietals, vintages, and
+                aging strategy.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">
+                How do you control humidity in barrel rooms and wine
+                cellars?<span class="toggle"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </div>
+              <div class="faq-a">
+                We design refrigeration systems with integrated humidity
+                management — typically targeting 60–75% RH — using oversized
+                low-velocity evaporators, humidification injection, and zoning
+                to protect corks, barrels, and label integrity simultaneously.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">
+                Can ColdMoose design refrigeration for a new winery build?<span
+                  class="toggle"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </div>
+              <div class="faq-a">
+                Absolutely. We collaborate with architects, builders, and winery
+                operators from early-stage concept through commissioning —
+                including thermal load calculations, equipment selection,
+                refrigerant strategy, and full system integration with your
+                facility plans.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">
+                How long does a typical winery refrigeration installation
+                take?<span class="toggle"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </div>
+              <div class="faq-a">
+                Project timelines vary by scope. A boutique cellar can be
+                commissioned in 3–6 weeks. Mid-sized barrel rooms and production
+                facilities typically range from 8–14 weeks, including
+                engineering, fabrication, installation, and validation.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">
+                Do you offer ongoing maintenance and technical support?<span
+                  class="toggle"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </div>
+              <div class="faq-a">
+                Yes. Every ColdMoose installation includes preventative
+                maintenance programs, remote monitoring options, and 24/7
+                emergency dispatch. We engineer long-term partnerships, not
+                transactional installs.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">
+                Can systems scale as my winery grows?<span class="toggle"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </div>
+              <div class="faq-a">
+                Yes — we engineer modular, scalable systems with future capacity
+                built in. As you add tank capacity, barrel rooms, or storage
+                space, your refrigeration architecture expands without costly
+                retrofits.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">
+                Are your refrigeration systems energy efficient?<span
+                  class="toggle"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </div>
+              <div class="faq-a">
+                Our systems use high-efficiency scroll compressors, EC fans,
+                variable-speed controls, and low-GWP refrigerants. Most
+                installations achieve 25–35% energy savings versus conventional
+                commercial refrigeration platforms.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">
+                What happens if my refrigeration system fails?<span
+                  class="toggle"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </div>
+              <div class="faq-a">
+                ColdMoose offers 24/7 emergency response with rapid on-site
+                dispatch, temporary cooling solutions, and inventory protection
+                protocols. Our priority service tier ensures winery clients are
+                prioritized in critical scenarios.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">
+                Can you design custom refrigeration for a unique facility?<span
+                  class="toggle"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </div>
+              <div class="faq-a">
+                Yes. Custom winery refrigeration engineering is one of our
+                specialties. We design bespoke systems for heritage cellars,
+                expansion projects, sustainability-focused builds, and
+                one-of-a-kind production environments.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEAD FORM -->
+    <section class="lead" id="contact">
+      <div class="container">
+        <div class="lead-grid">
+          <div class="reveal">
+            <span class="eyebrow">Request a Consultation</span>
+            <h2>Speak with a <span>Winery Refrigeration Specialist</span></h2>
+            <p class="lead-lead">
+              Tell us about your winery, your project, and your vision. A
+              ColdMoose specialist will respond within one business day with a
+              tailored consultation, custom recommendation, and project
+              evaluation.
+            </p>
+            <div class="lead-highlights">
+              <div class="lead-hl">
+                <div class="ic"><i class="fa-solid fa-bolt"></i></div>
+                <div>
+                  <strong>1 Business Day Response</strong
+                  ><span>Direct contact from a refrigeration specialist</span>
+                </div>
+              </div>
+              <div class="lead-hl">
+                <div class="ic">
+                  <i class="fa-solid fa-file-circle-check"></i>
+                </div>
+                <div>
+                  <strong>Free Project Evaluation</strong
+                  ><span>On-site assessment and technical recommendation</span>
+                </div>
+              </div>
+              <div class="lead-hl">
+                <div class="ic"><i class="fa-solid fa-lock"></i></div>
+                <div>
+                  <strong>Confidential &amp; No-Obligation</strong
+                  ><span>Your project details stay private</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form
+            class="form-card reveal"
+            id="leadForm"
+            onsubmit="return submitForm(event);"
+          >
+            <span class="tag"
+              ><i class="fa-solid fa-snowflake"></i> Winery Refrigeration
+              Consultation</span
+            >
+            <h3>Tell Us About Your Project</h3>
+            <p>
+              All fields are confidential and reviewed by a senior refrigeration
+              specialist.
+            </p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input
+                  type="text"
+                  name="fullName"
+                  placeholder="Your full name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label>Winery / Business Name</label>
+                <input
+                  type="text"
+                  name="business"
+                  placeholder="e.g. Niagara Estate Winery"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="name@winery.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="(905) 000-0000"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Facility Type</label>
+                <select name="facilityType" required>
+                  <option value="">Select facility type</option>
+                  <option>Winery / Production Facility</option>
+                  <option>Vineyard Operation</option>
+                  <option>Wine Cellar</option>
+                  <option>Barrel Storage / Aging Facility</option>
+                  <option>Wine Storage / Distribution</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Winery Size</label>
+                <select name="winerySize" required>
+                  <option value="">Select winery size</option>
+                  <option>Boutique (under 5,000 cases/yr)</option>
+                  <option>Small (5,000 – 25,000 cases/yr)</option>
+                  <option>Mid-Sized (25,000 – 100,000 cases/yr)</option>
+                  <option>Large (100,000+ cases/yr)</option>
+                  <option>Industrial / Multi-Site</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Estimated Project Size</label>
+                <select name="projectSize" required>
+                  <option value="">Select project size</option>
+                  <option>Under $25,000</option>
+                  <option>$25,000 – $75,000</option>
+                  <option>$75,000 – $250,000</option>
+                  <option>$250,000 – $1M</option>
+                  <option>$1M+</option>
+                  <option>Not sure — need consultation</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Location (Ontario Region)</label>
+                <input
+                  type="text"
+                  name="location"
+                  placeholder="e.g. Niagara, Prince Edward County"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row single">
+              <div class="form-group">
+                <label>Project Details</label>
+                <textarea
+                  name="message"
+                  placeholder="Tell us about your refrigeration needs, timeline, current systems, and any specific technical requirements..."
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn-dark">
+                <i class="fa-solid fa-paper-plane"></i> Request Winery
+                Refrigeration Consultation
+              </button>
+              <div class="form-meta">
+                <i class="fa-solid fa-shield-halved"></i> Confidential ·
+                Reviewed within one business day
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#" class="logo" aria-label="Cold Moose - Build to Cool">
+              <svg
+                viewBox="0 0 470 305"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-hidden="true"
+              >
+                <use href="#cm-logo" />
+              </svg>
+            </a>
+            <p>
+              Ontario's trusted refrigeration partner for wineries, vineyards,
+              and wine production facilities. Engineered systems that protect
+              the quality of every vintage.
+            </p>
+            <div class="footer-social">
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h5>Solutions</h5>
+            <ul>
+              <li><a href="#solutions">Winery Refrigeration</a></li>
+              <li><a href="#solutions">Wine Cellar Cooling</a></li>
+              <li><a href="#solutions">Barrel Room Refrigeration</a></li>
+              <li><a href="#solutions">Commercial Wine Storage</a></li>
+              <li><a href="#solutions">Vineyard Cooling</a></li>
+              <li><a href="#solutions">Custom Engineering</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="#expertise">Our Expertise</a></li>
+              <li><a href="#process">Our Process</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Contact</h5>
+            <ul class="footer-contact">
+              <li>
+                <i class="fa-solid fa-location-dot"></i
+                ><span
+                  >Serving Ontario<br />Niagara · Prince Edward County ·
+                  GTA</span
+                >
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i
+                ><span>1-800-COLDMOOSE<br />24/7 Emergency Response</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i
+                ><span>winery@coldmoose.ca</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 ColdMoose Refrigeration. All rights reserved.</span>
+          <div class="links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // NAV scroll
+      const nav = document.getElementById("nav");
+      window.addEventListener("scroll", () => {
+        nav.classList.toggle("scrolled", window.scrollY > 30);
+      });
+
+      // Burger
+      const burger = document.getElementById("burger");
+      const navLinks = document.getElementById("navLinks");
+      burger.addEventListener("click", () => navLinks.classList.toggle("open"));
+      navLinks
+        .querySelectorAll("a")
+        .forEach((a) =>
+          a.addEventListener("click", () => navLinks.classList.remove("open")),
+        );
+
+      // FAQ accordion
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        item.querySelector(".faq-q").addEventListener("click", () => {
+          const isActive = item.classList.contains("active");
+          document
+            .querySelectorAll(".faq-item")
+            .forEach((i) => i.classList.remove("active"));
+          if (!isActive) item.classList.add("active");
+        });
+      });
+
+      // Reveal on scroll
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("is-visible");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      // Image fallback — mark broken images so the branded gradient shows through
+      document.querySelectorAll('.sol-img img').forEach(img => {
+        img.addEventListener('error', () => img.classList.add('broken'));
+      });
+
+      // Form
+      function submitForm(e) {
+        e.preventDefault();
+        const btn = e.target.querySelector('button[type="submit"]');
+        const original = btn.innerHTML;
+        btn.innerHTML =
+          '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+        btn.disabled = true;
+        setTimeout(() => {
+          btn.innerHTML =
+            '<i class="fa-solid fa-check"></i> Consultation Request Received';
+          btn.style.background = "linear-gradient(135deg,#1b9e5a,#0f7440)";
+          e.target.reset();
+          setTimeout(() => {
+            btn.innerHTML = original;
+            btn.disabled = false;
+            btn.style.background = "";
+          }, 4500);
+        }, 1100);
+        return false;
+      }
+    </script>
+  </body>
+</html>
